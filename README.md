@@ -9,6 +9,8 @@ AWS re:Invent 2026 세션 카탈로그를 바탕으로 전체 주제의 흐름, 
 - [세션 흐름, 실무 추천, 단기 트렌드](docs/analysis.ko.md)
 - [데이터 구조와 집계 방법](docs/data-guide.md)
 - [다른 에이전트를 위한 작업 안내](AGENTS.md)
+- [외부 행사 종류별 정리](docs/parties.ko.md) · [외부 행사 JSON](data/reinvent2026_parties.json)
+- [프로젝트 스킬 reinvent-research](.agents/skills/reinvent-research/SKILL.md)
 - [추천 및 전망 JSON](data/curation.json)
 - [전체 세션 원본 JSON](data/reinvent2026_sessions.json)
 - [재현 가능한 통계](data/stats.json) · [출처와 스냅샷 정보](data/provenance.json)
@@ -38,24 +40,27 @@ AWS re:Invent 2026 세션 카탈로그를 바탕으로 전체 주제의 흐름, 
 
 추천 순서이며 시간표가 아닙니다. 반복 회차와 일정 충돌은 별도로 확인해야 합니다.
 
-## 검색과 재현
+## 프로젝트 스킬로 검색과 갱신
 
-Python 3.10 이상과 표준 라이브러리만 사용합니다. 설치·API 키·네트워크 연결이 필요 없습니다. 출력은 JSON입니다.
+`.agents/skills/reinvent-research`에 프로젝트 스킬을 제공합니다. 기존 독립 CLI 스크립트는 스킬로 대체했습니다. 지원하는 에이전트는 `$reinvent-research`로 호출하고, 자동 탐색을 지원하지 않는 에이전트는 SKILL.md를 직접 읽으면 됩니다. 저장된 JSON을 읽는 데 API 키나 네트워크 연결은 필요 없습니다. 웹 갱신에는 `ego-browser`가 필요합니다.
 
 ```bash
 git clone https://github.com/goohooh/aws-reinvent-2026.git
 cd aws-reinvent-2026
-python3 scripts/catalog.py validate
-python3 scripts/catalog.py stats
-python3 scripts/catalog.py search 'MCP' --limit 10
-python3 scripts/catalog.py search '보안' --unique
-python3 scripts/catalog.py show COP401-R --repeats
-python3 scripts/catalog.py shortlist --category security
 ```
+
+사용 예시:
+
+- `$reinvent-research MCP 보안 세션을 찾아서 추천 이유와 반복 회차를 알려줘.`
+- `$reinvent-research 외부 행사에서 AI Ops와 Security 관련 점심·저녁을 찾아줘.`
+- `$reinvent-research Conference Parties를 갱신하고 JSON과 종류별 Markdown을 업데이트해줘.`
+- `$reinvent-research 원본 해시, 통계, 세션 참조와 외부 행사 분류를 검증해줘.`
 
 다른 세션이나 에이전트에게는 다음처럼 요청할 수 있습니다.
 
-> 이 저장소의 AGENTS.md, docs/analysis.ko.md, data/curation.json을 읽고 기존 분석을 이어가세요. 세션 설명은 data/reinvent2026_sessions.json에서 확인하고, 추천에는 정확한 코드와 근거를 포함하세요. 기존 추천을 출발점으로 삼되 내 새로운 목표에 맞게 우선순위를 조정하세요.
+> 이 저장소의 AGENTS.md와 .agents/skills/reinvent-research/SKILL.md를 읽고 작업하세요. 세션은 data/reinvent2026_sessions.json, 외부 행사는 data/reinvent2026_parties.json에서 확인하세요. JSON 증거와 Markdown 해석을 구분하고 기존 분석을 내 목표에 맞게 이어가세요.
+
+외부 행사는 [Conference Parties](https://conferenceparties.com/reinvent2026/)의 2026-11-08 스냅샷 178개 목록 항목을 8가지 형식으로 분류했습니다. 중복 목록도 보존한 수치이며 세션 통계에 합산하지 않습니다. [데이터 구조와 한계](docs/parties-data-guide.md)를 참고하세요.
 
 ## 출처와 이용 범위
 

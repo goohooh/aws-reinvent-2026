@@ -91,4 +91,4 @@ AWS DevOps Agent의 공식 설명도 관측 데이터·코드·배포 이력을 
 
 **COP401-R → OPN304-R → COP317-R → SEC321-R → SEC343 → SEC407-R**
 
-이 조합에서 가져올 결과물은 실패를 재현하는 평가셋, 에이전트 실행 trace, 스킬 기반 운영 런북, 개발 단계별 보안 통제, MCP 변경 검사, 실제 실행 권한 경계입니다. 추천 순서는 시간표가 아니며 `python3 scripts/catalog.py show CODE --repeats`로 회차를 확인할 수 있습니다.
+이 조합에서 가져올 결과물은 실패를 재현하는 평가셋, 에이전트 실행 trace, 스킬 기반 운영 런북, 개발 단계별 보안 통제, MCP 변경 검사, 실제 실행 권한 경계입니다. 추천 순서는 시간표가 아니며 [프로젝트 스킬](../.agents/skills/reinvent-research/SKILL.md)에 정확한 세션 코드의 반복 회차 조회를 요청할 수 있습니다.

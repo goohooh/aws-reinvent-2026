@@ -1,0 +1,4850 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "external_event_listings",
+  "source": {
+    "name": "Conference Parties",
+    "url": "https://conferenceparties.com/reinvent2026/",
+    "collected_at": "2026-11-08T13:07:46.466Z",
+    "source_timezone": null,
+    "method": "ego-browser semantic snapshot and DOM table extraction",
+    "scope": "178 populated five-column event rows on the supplied Parties page; excludes banner-only links, navigation, other pages and organizer landing-page details.",
+    "organizer_pages_verified": false,
+    "affiliation": "Unofficial directory, not affiliated with Amazon or AWS.",
+    "rights_notice": "Factual event metadata and source links with editorial classification; no site HTML, images, logos, or promotional descriptions are republished."
+  },
+  "classification": {
+    "basis": "Editorial classification of listing title and visible context; not source-provided categories.",
+    "topic_tags_basis": "Only explicit title keywords; no topic inferred solely from a sponsor name.",
+    "categories": [
+      {
+        "id": "technical_discussion",
+        "label_ko": "기술 세션·토론·쇼케이스",
+        "count": 10
+      },
+      {
+        "id": "breakfast_coffee",
+        "label_ko": "조식·커피",
+        "count": 14
+      },
+      {
+        "id": "lunch",
+        "label_ko": "점심",
+        "count": 18
+      },
+      {
+        "id": "dinner",
+        "label_ko": "저녁",
+        "count": 26
+      },
+      {
+        "id": "happy_hour_reception",
+        "label_ko": "해피아워·리셉션·네트워킹",
+        "count": 59
+      },
+      {
+        "id": "party_nightlife",
+        "label_ko": "파티·공연·나이트라이프",
+        "count": 27
+      },
+      {
+        "id": "experience_sports",
+        "label_ko": "체험·스포츠",
+        "count": 23
+      },
+      {
+        "id": "keynote_watch",
+        "label_ko": "키노트 공동 시청",
+        "count": 1
+      }
+    ]
+  },
+  "statistics": {
+    "listing_count": 178,
+    "by_date": {
+      "2026-11-29": 5,
+      "2026-11-30": 38,
+      "2026-12-01": 67,
+      "2026-12-02": 43,
+      "2026-12-03": 22,
+      "2026-12-04": 3
+    },
+    "by_category": {
+      "technical_discussion": 10,
+      "dinner": 26,
+      "experience_sports": 23,
+      "party_nightlife": 27,
+      "breakfast_coffee": 14,
+      "lunch": 18,
+      "happy_hour_reception": 59,
+      "keynote_watch": 1
+    },
+    "at_capacity_count": 2
+  },
+  "quality_issues": [
+    {
+      "type": "duplicate_listing",
+      "event_ids": [
+        "cp26-b6850adb0a8d",
+        "cp26-c47c2d73151f"
+      ],
+      "note": "Datadog Off Leash: same date, time, sponsor, venue and registration URL; retained as two source listings."
+    },
+    {
+      "type": "possible_date_conflict",
+      "event_ids": [
+        "cp26-d0eb5453fee6",
+        "cp26-0f7b430827c3"
+      ],
+      "note": "ClickHouse / Chainsmokers: similar title, same time and venue, but different dates and registration URLs; organizer confirmation needed."
+    },
+    {
+      "type": "related_registration",
+      "event_ids": [
+        "cp26-2ca8f76094bc",
+        "cp26-f6c46ff9e2a1"
+      ],
+      "note": "House of Kube and Qodo VIP entry: same time and venue with distinct organizers/registration links; likely related access paths, not automatically merged."
+    },
+    {
+      "type": "malformed_registration_url",
+      "event_ids": [
+        "cp26-6ce1fec80f7a"
+      ],
+      "note": "Source registration URL starts with hhttps://; preserved without correction. Not rendered as a working link in Markdown."
+    }
+  ],
+  "recommendations": [
+    {
+      "event_id": "cp26-c312721de030",
+      "focus": "ai_security",
+      "rationale_ko": "에이전트 프로덕션 보안을 제목에 명시한 기술 세션. 12/1에도 동일 제목 목록이 있다."
+    },
+    {
+      "event_id": "cp26-d1c996403a64",
+      "focus": "ai_ops",
+      "rationale_ko": "Datadog·Anthropic·AWS와 에이전트 규모 확장을 다루는 조식 제목이 명시되어 있다."
+    },
+    {
+      "event_id": "cp26-cbb7a40f349c",
+      "focus": "ai_agents",
+      "rationale_ko": "LangChain·Factory·NVIDIA 패널이 명시된 조식. 기술 대화에 적합한 형식이다."
+    },
+    {
+      "event_id": "cp26-7a0a3b816f7d",
+      "focus": "ai_ops_finops",
+      "rationale_ko": "AI·FinOps·관측성을 제목에 명시한 점심. 다른 날짜의 점심·저녁 목록도 있다."
+    },
+    {
+      "event_id": "cp26-f2336b639be5",
+      "focus": "ai_security",
+      "rationale_ko": "AI 런타임 데이터·신원 보안을 제목에 명시한 저녁."
+    },
+    {
+      "event_id": "cp26-3c55d627f4d2",
+      "focus": "security",
+      "rationale_ko": "사이버보안 스타트업 쇼케이스. 네트워킹과 업체 탐색 목적의 후보."
+    },
+    {
+      "event_id": "cp26-f910f1ef3b0e",
+      "focus": "ai_agents",
+      "rationale_ko": "Redis·Baseten·Langchain의 Agent Arena 파트너 해피아워. 파트너 중심 행사이므로 참가 조건 확인 필요."
+    },
+    {
+      "event_id": "cp26-9ac5271986a9",
+      "focus": "ai_security",
+      "rationale_ko": "에이전트와 보안 리더를 제목에 명시한 비공개 저녁. 승인과 주소 확인 필요."
+    },
+    {
+      "event_id": "cp26-b36b8a9ba3cd",
+      "focus": "security",
+      "rationale_ko": "CISO 전략 살롱. 대상 직무에 맞는지 참가 조건 확인 필요."
+    },
+    {
+      "event_id": "cp26-b63b8ad54a7f",
+      "focus": "security",
+      "rationale_ko": "Datadog Security Reception. 보안 분야 네트워킹 후보이며 기술 교육 여부는 목록에 명시되지 않는다."
+    }
+  ],
+  "events": [
+    {
+      "id": "cp26-6487ee401c64",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 3,
+      "date": "2026-11-29",
+      "day_raw": "Sunday",
+      "time_raw": "2:30–7PM",
+      "timezone": null,
+      "title": "Kubernetes Automation Day in Rockhouse",
+      "sponsor_raw": "KubeAuto Day",
+      "location_raw": "Rockhouse\nGrand Canal Shoppes\nThe Venetian",
+      "added_raw": "10/21",
+      "registration_urls": [
+        "https://kubeauto.day/las-vegas"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Kubernetes Automation Day in Rockhouse\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-98e8573f7634",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 5,
+      "date": "2026-11-29",
+      "day_raw": "Sunday",
+      "time_raw": "5:30–8PM",
+      "timezone": null,
+      "title": "2026 FinOps Leaders Dinner",
+      "sponsor_raw": "ProsperOps & Flexera",
+      "location_raw": "Delmonico Steakhouse\nThe Venetian",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://www.prosperops.com/event/aws-reinvent-finops-leaders-dinner/?utm_source=conferenceparties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "finops"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "2026 FinOps Leaders Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-30bcf8fa3018",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 6,
+      "date": "2026-11-29",
+      "day_raw": "Sunday",
+      "time_raw": "6–10PM",
+      "timezone": null,
+      "title": "Pier Racing 2026",
+      "sponsor_raw": "Pier Cloud",
+      "location_raw": "SpeedVegas\n14200 S Las Vegas Blvd",
+      "added_raw": "10/18",
+      "registration_urls": [
+        "https://marketing.piercloud.com/pier-racing?utm_source=awsparties&utm_medium=site&utm_campaign=pierracing"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Pier Racing 2026\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-ccc23dd5995e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 7,
+      "date": "2026-11-29",
+      "day_raw": "Sunday",
+      "time_raw": "7PM–1AM",
+      "timezone": null,
+      "title": "AWS re:Invent Kickoff Night with HabileLabs",
+      "sponsor_raw": "HabileLabs",
+      "location_raw": "Register to See Address",
+      "added_raw": "9/11",
+      "registration_urls": [
+        "https://luma.com/y4zpryyh"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "AWS re:Invent Kickoff Night with HabileLabs\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-39d298fbb49d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 8,
+      "date": "2026-11-29",
+      "day_raw": "Sunday",
+      "time_raw": "9PM–2AM",
+      "timezone": null,
+      "title": "UndrGrnd.Social Vegas Edition",
+      "sponsor_raw": "UndrGrnd.Social",
+      "location_raw": "Penthouse Suite\nThe Cosmopolitan",
+      "added_raw": "10/18",
+      "registration_urls": [
+        "https://luma.com/bbmjig1j"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "UndrGrnd.Social Vegas Edition\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-600afcc37405",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 13,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–9AM",
+      "timezone": null,
+      "title": "Breakfast - Meet & Greet Informal Executive Introductions",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Breakfast - Meet & Greet\nInformal Executive Introductions - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2f3fb28145ba",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 14,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–10AM",
+      "timezone": null,
+      "title": "Stripe Developer Breakfast",
+      "sponsor_raw": "Stripe",
+      "location_raw": "Mon Ami Gabi\nParis Hotel",
+      "added_raw": "10//22",
+      "registration_urls": [
+        "https://www.meetup.com/stripe-at-re-invent/events/317090451"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [
+        "development"
+      ],
+      "quality_flags": [
+        "added_date_malformed"
+      ],
+      "listing_text_raw": "Stripe Developer Breakfast\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c82a05f02005",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 16,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8AM–2PM",
+      "timezone": null,
+      "title": "Stripe Day Party",
+      "sponsor_raw": "Stripe",
+      "location_raw": "Mon Ami Gabi\nParis Hotel",
+      "added_raw": "10/14",
+      "registration_urls": [
+        "https://stripe.events/stripe-at-reinvent2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Stripe Day Party\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-6c0366103bac",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 17,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8:30–10:30AM",
+      "timezone": null,
+      "title": "Monday Breakfast",
+      "sponsor_raw": "TrendAI™",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://resources.trendaisecurity.com/aws-reinvent-26-events.html"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Monday Breakfast\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-184579a43208",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 18,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "10AM–",
+      "timezone": null,
+      "title": "Take the Wheel in Las Vegas",
+      "sponsor_raw": "Basis",
+      "location_raw": "SpeedVegas\n14200 S Las Vegas Blvd",
+      "added_raw": "10/21",
+      "registration_urls": [
+        "https://app.basisworldwide.com/supercar-experience?utm_source=cp&utm_medium=lstng&utm_campaign=svtxt&utm_id=svtxt"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [
+        "end_time_not_listed"
+      ],
+      "listing_text_raw": "Take the Wheel in Las Vegas\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c312721de030",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 19,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "11AM–1:30PM",
+      "timezone": null,
+      "title": "Securing AI Agents in Production: Private Sessions with AWS & Britive",
+      "sponsor_raw": "Britive & AWS",
+      "location_raw": "Tower Suite\nCaesars Palace",
+      "added_raw": "11/3",
+      "registration_urls": [
+        "https://www.britive.com/resource/events/aws-reinvent-2026-britive"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [
+        "ai_agents",
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Securing AI Agents in Production: Private Sessions with AWS & Britive - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2ae96e9c5963",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 20,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "11:30AM–1:30PM",
+      "timezone": null,
+      "title": "Monday Lunch",
+      "sponsor_raw": "TrendAI™",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://resources.trendaisecurity.com/aws-reinvent-26-events.html"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Monday Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-7a0a3b816f7d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 21,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "12–1:30PM",
+      "timezone": null,
+      "title": "AI, FinOps & Observability Leaders Lunch",
+      "sponsor_raw": "Cloudgov.ai",
+      "location_raw": "Chéri Rooftop\nParis",
+      "added_raw": "",
+      "registration_urls": [
+        "https://luma.com/0wxyztme"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [
+        "ai_agents",
+        "observability",
+        "finops"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "AI, FinOps & Observability Leaders Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-ea3b7ad72d6a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 22,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "12:30–1:30PM",
+      "timezone": null,
+      "title": "Customer Executive Roundtable",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Customer Executive Roundtable - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b78383ad4db2",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 23,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "1–4PM",
+      "timezone": null,
+      "title": "New Relic Jet Lag Drinks & Darts",
+      "sponsor_raw": "New Relic",
+      "location_raw": "Flight Club\nPalazzo, The Venetian",
+      "added_raw": "10/28",
+      "registration_urls": [
+        "https://newrelic.com/events/2026-11-30/happyhour"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "New Relic Jet Lag Drinks & Darts\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b60910f27761",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 24,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "1–4PM",
+      "timezone": null,
+      "title": "Monday Afternoon Mixer: Engineering pre:Invent Party",
+      "sponsor_raw": "ResolveAI",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "9/28",
+      "registration_urls": [
+        "https://luma.com/sqqi6khx?utm_source=conference-parties&utm_medium=site-listing&utm_campaign=monday-eng-mixer&utm_id=re-invent-2026-sushisamba"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "development"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Monday Afternoon Mixer:\nEngineering pre:Invent Party - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-da2dcce7b393",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 25,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "1:30–3PM",
+      "timezone": null,
+      "title": "Exclusive Lunch at SushiSAMBA",
+      "sponsor_raw": "Excelien & Datafy",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://datafy.io/sushisamba-reinvent-excelien/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Exclusive Lunch at SushiSAMBA\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-3e3652d53fd3",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 26,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "3–5PM",
+      "timezone": null,
+      "title": "PCAN.cloud re:Invent Networking Kickoff!",
+      "sponsor_raw": "PCAN.cloud, Archera,\nLabra.io & PeerSpot",
+      "location_raw": "Register to See Address\nNear The Venetian & Caesars Palace",
+      "added_raw": "10/15",
+      "registration_urls": [
+        "https://luma.com/ol8iv9zc?utm_source=conferenceparties&utm_medium=directory&utm_campaign=reinvent2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "PCAN.cloud re:Invent Networking Kickoff!\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-f4e4753d6ca9",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 27,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "4–6:30PM",
+      "timezone": null,
+      "title": "Catalyst Pre-Party at AWS re:Invent",
+      "sponsor_raw": "Partnership Leaders",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/4",
+      "registration_urls": [
+        "https://www.joincatalyst.com/catalyst-pre-party-at-aws-reinvent"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Catalyst Pre-Party at AWS re:Invent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-7198227ec56f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 28,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "4–7PM",
+      "timezone": null,
+      "title": "Welcome Reception",
+      "sponsor_raw": "AWS & Partners",
+      "location_raw": "Expo Hall\nThe Venetian",
+      "added_raw": "8/10",
+      "registration_urls": [],
+      "registration_status": "not_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Welcome Reception",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-a62370481449",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 29,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–7:30PM",
+      "timezone": null,
+      "title": "Golden Jackets: re:Invent 2026 Happy Hour (Jacket Required)",
+      "sponsor_raw": "AWS",
+      "location_raw": "Happy Camper\nFashion Show LV",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://docs.google.com/forms/d/1FDy7jze78eGROSi0CwZoitpXQWh9y84cBhxdsNc-8MM/edit"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [
+        "Jacket Required"
+      ],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Golden Jackets: re:Invent 2026 Happy Hour\n(Jacket Required) - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-a445bb4c6e18",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 30,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "The CX & AI Social at AWS re:Invent",
+      "sponsor_raw": "NiCE",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "10/27",
+      "registration_urls": [
+        "https://events.cdmmedia.com/event/da77ecec-d140-4e8a-ac91-a3f3c06ca1f2/summary/?refid=mktg-a-cp-nice-awsreinvent2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "The CX & AI Social at AWS re:Invent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8ed01b7a1673",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 31,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "re:Invent Kickoff Reception @ Delmonico",
+      "sponsor_raw": "The New Stack & Hydrolix",
+      "location_raw": "Delmonico Steakhouse\nThe Venetian",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://www.eventbrite.com/e/reinvent-reception-with-the-new-stack-hydrolix-tickets-2003796176304"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "re:Invent Kickoff Reception @ Delmonico\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-9e5c30f77aab",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 32,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–8:30PM",
+      "timezone": null,
+      "title": "Datadog Welcome Happy Hour",
+      "sponsor_raw": "Datadog",
+      "location_raw": "Bazaar Meat\nPalazzo, The Venetian",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-welcome-happy-hour/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Datadog Welcome Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-a6ce56659101",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 33,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "AWS re:Invent 2026 Kickoff Party",
+      "sponsor_raw": "Rootly AI",
+      "location_raw": "Rockhouse\nThe Venetian",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://luma.com/r87odmij"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AWS re:Invent 2026 Kickoff Party\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-344a25052eeb",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 34,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Executive Mastermind Dinner",
+      "sponsor_raw": "Commvault",
+      "location_raw": "Upscale Restaurant\nCosmopolitan",
+      "added_raw": "9/12",
+      "registration_urls": [
+        "https://luma.com/dgbkfdrf"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Executive Mastermind Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b8c4d73bcccf",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 35,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–9:30PM",
+      "timezone": null,
+      "title": "re:Think the Transaction An Exclusive Executive Dinner",
+      "sponsor_raw": "Flywl & 1Password",
+      "location_raw": "Eiffel Tower Restaurant\nParis",
+      "added_raw": "11/7",
+      "registration_urls": [
+        "https://luma.com/tfm07wfb"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "re:Think the Transaction\nAn Exclusive Executive Dinner - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-0519187498e8",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 36,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6–10PM",
+      "timezone": null,
+      "title": "Monday Reception: Celebrate the $1B Club",
+      "sponsor_raw": "TrendAI™",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://resources.trendaisecurity.com/aws-reinvent-26-events.html"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Monday Reception: Celebrate the $1B Club\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-07b90fef8052",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 37,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "6:30–9:30PM",
+      "timezone": null,
+      "title": "(Eve)nings with Vercel",
+      "sponsor_raw": "Vercel, Slack & Exa",
+      "location_raw": "CUT by Wolfgang Puck\nThe Venetian",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://luma.com/evenings?utm_source=CP"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "(Eve)nings with Vercel\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-e77846eb9bca",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 38,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Darktrace After Dark",
+      "sponsor_raw": "Darktrace",
+      "location_raw": "Clique Bar\nThe Cosmopolitan",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://www.darktrace.com/event-registration/darktrace-after-dark-at-aws-re-invent"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Darktrace After Dark\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-cec65f788520",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 39,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Welcome Dinner - Executive Reception",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Welcome Dinner - Executive Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-6af3f3c18a88",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 40,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "Access Granted: From Ice to Incognito with Trellix",
+      "sponsor_raw": "Trellix",
+      "location_raw": "Minus5 Ice Bar &\n1923 Prohibition Lounge\nVenetian Shoppes",
+      "added_raw": "10/20",
+      "registration_urls": [
+        "https://events.trellix.com/AccessGrantedreInvent2026/ConferenceParties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Access Granted: From Ice to Incognito with Trellix\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-2ca8f76094bc",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 41,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "7PM–1AM",
+      "timezone": null,
+      "title": "House of Kube @ AWS re:Invent",
+      "sponsor_raw": "Platform Engineering, Tailscale, Plural Labs & Qudo.ai",
+      "location_raw": "INDUSTRIAL\nevent space\n2330 S Industrial Rd",
+      "added_raw": "9/9",
+      "registration_urls": [
+        "https://luma.com/platform-wsip"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [
+        "related_registration"
+      ],
+      "listing_text_raw": "House of Kube @ AWS re:Invent\nRequest an Invite",
+      "related_listing_ids": [
+        "cp26-f6c46ff9e2a1"
+      ],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-f6c46ff9e2a1",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 42,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "7PM–1AM",
+      "timezone": null,
+      "title": "Go VIP with Qodo at House of Kube",
+      "sponsor_raw": "Qodo",
+      "location_raw": "INDUSTRIAL event space\n2330 S Industrial Rd",
+      "added_raw": "10/29",
+      "registration_urls": [
+        "https://www.qodo.ai/reinvent/#vip-night"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [
+        "related_registration"
+      ],
+      "listing_text_raw": "Go VIP with Qodo at House of Kube\nRequest an Invite",
+      "related_listing_ids": [
+        "cp26-2ca8f76094bc"
+      ],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-4d684474654f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 44,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "7:30–8:30PM",
+      "timezone": null,
+      "title": "Ferris Wheel Bar at re:Invent 2026",
+      "sponsor_raw": "Maze",
+      "location_raw": "High Roller\nThe LINQ Promenade\n3545 S Las Vegas Blvd",
+      "added_raw": "9/23",
+      "registration_urls": [
+        "https://mazehq.com/event/ferris-wheel-bar-at-reinvent-2026/?utm_source=conferenceparties&utm_term=reinvent"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Ferris Wheel Bar at re:Invent 2026\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-58b22a08553b",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 45,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "7:30–9:30PM",
+      "timezone": null,
+      "title": "AI, FinOps & Observability Leaders Dinner",
+      "sponsor_raw": "Cloudgov.ai",
+      "location_raw": "Carmine's\nThe Forum Shops\nCaesars Palace",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://luma.com/cnk2r17n"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "ai_agents",
+        "observability",
+        "finops"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "AI, FinOps & Observability Leaders Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-55b74af21ea5",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 46,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–10PM",
+      "timezone": null,
+      "title": "Hunters & Unicorns Happy Hour at the Vesper Bar",
+      "sponsor_raw": "Aurasell, Chainguard, Parallel, Harness & TopShelf",
+      "location_raw": "Vesper Bar\nCosmopolitan",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://www.eventbrite.co.uk/e/hunters-unicorns-happy-hour-at-the-vesper-bar-the-cosmo-tickets-2003467972638"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Hunters & Unicorns Happy Hour at the Vesper Bar\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-1bcc07487335",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 47,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–10PM",
+      "timezone": null,
+      "title": "The AWS re:Invent Security Dinner",
+      "sponsor_raw": "Scanner",
+      "location_raw": "Carbone Riviera\nBellagio",
+      "added_raw": "10/27",
+      "registration_urls": [
+        "https://luma.com/scanner-wiv2"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "The AWS re:Invent Security Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-411e1ace31b9",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 48,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–10PM",
+      "timezone": null,
+      "title": "Redis Welcome Party at AWS re:Invent 2026",
+      "sponsor_raw": "Redis",
+      "location_raw": "Cañonita\nThe Venetian Shoppes",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://redis.io/events/redis-welcome-party-at-aws-reinvent-2026/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Redis Welcome Party at AWS re:Invent 2026\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-f2336b639be5",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 49,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–10PM",
+      "timezone": null,
+      "title": "Executive Dinner: The AI Enterprise: Securing Data & Identity at Runtime",
+      "sponsor_raw": "Skyflow & Descope",
+      "location_raw": "Delmonico Steakhouse\nThe Venetian",
+      "added_raw": "10/9",
+      "registration_urls": [
+        "https://www.skyflow.com/dinners/the-ai-enterprise-securing-data-identity-at-runtime"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "ai_agents",
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Executive Dinner: The AI Enterprise: Securing Data & Identity at Runtime\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-ae157ab100d9",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 50,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–11PM",
+      "timezone": null,
+      "title": "Join Dreeze for Dinner",
+      "sponsor_raw": "Dreeze",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/26",
+      "registration_urls": [],
+      "registration_status": "at_capacity",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Sorry. At Capacity\nJoin Dreeze for Dinner",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-e03748b5c3e5",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 51,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "8–11PM",
+      "timezone": null,
+      "title": "Harness After-Hours Party",
+      "sponsor_raw": "Harness",
+      "location_raw": "Flight Club\nPalazzo, The Venetian",
+      "added_raw": "10/4",
+      "registration_urls": [
+        "https://www.harness.io/event/aws-re-invent-2026?&utm_medium=advertising&utm_term=confparties&utm_content=tradeshow"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Harness After-Hours Party\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-d0eb5453fee6",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 52,
+      "date": "2026-11-30",
+      "day_raw": "Monday",
+      "time_raw": "9PM–12AM",
+      "timezone": null,
+      "title": "House Party with the Chainsmokers",
+      "sponsor_raw": "Clickhouse",
+      "location_raw": "Intrigue Nightclub\nWynn",
+      "added_raw": "11/7",
+      "registration_urls": [
+        "https://luma.com/85fo8u3e"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [
+        "possible_date_conflict"
+      ],
+      "listing_text_raw": "House Party with the Chainsmokers\nRequest an Invite",
+      "related_listing_ids": [
+        "cp26-0f7b430827c3"
+      ],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-d1c996403a64",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 56,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–8:25AM",
+      "timezone": null,
+      "title": "Breakfast: Move AI Agents at Scale with Datadog, Anthropic & AWS",
+      "sponsor_raw": "Datadog",
+      "location_raw": "Bazaar Meat\nPalazzo, The Venetian",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/scaling-your-ai-agents-with-datadog-and-our-partners/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Breakfast: Move AI Agents at Scale with Datadog, Anthropic & AWS - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-3f9e45317b5d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 57,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–8:25AM",
+      "timezone": null,
+      "title": "Breakfast: With Datadog's EMEA Community",
+      "sponsor_raw": "Datadog",
+      "location_raw": "Bazaar Meat\nPalazzo, The Venetian",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-datadogs-emea-breakfast/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Breakfast: With Datadog's EMEA Community\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-d558eb204e6e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 58,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7:30–11:30AM",
+      "timezone": null,
+      "title": "Fairway to the Cloud - CTOs Only Please",
+      "sponsor_raw": "BairesDev",
+      "location_raw": "Bali Hai Golf Club\n5160 S Las Vegas Blvd",
+      "added_raw": "10/26",
+      "registration_urls": [
+        "https://luma.com/FairwaytotheCloud"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [
+        "CTOs Only Please"
+      ],
+      "category": "experience_sports",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Fairway to the Cloud - CTOs Only Please\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8e07bcc4c743",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 59,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "8–9AM",
+      "timezone": null,
+      "title": "Breakfast - From Ambition to Governed Adoption",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Breakfast - From Ambition to Governed Adoption\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-cc534bfcf581",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 60,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "8:30AM–",
+      "timezone": null,
+      "title": "Watch the Opening Keynote with Us at Wakuda",
+      "sponsor_raw": "Observe by Snowflake",
+      "location_raw": "Wakuda\nPalazzo, The Venetian",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://www.snowflake.com/event/watch-the-opening-keynote-with-us-at-wakuda-20261201/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "keynote_watch",
+      "topic_tags": [],
+      "quality_flags": [
+        "end_time_not_listed"
+      ],
+      "listing_text_raw": "Watch the Opening Keynote with Us at Wakuda\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-18c8e2a4156b",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 61,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "9:30AM–12PM",
+      "timezone": null,
+      "title": "Super Car-tesia",
+      "sponsor_raw": "Cartesia",
+      "location_raw": "Register to See Address",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/dztqp1c4"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Super Car-tesia\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-7c9e9e70bcf1",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 62,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "10–11:30AM",
+      "timezone": null,
+      "title": "Women in Cyber: The Le Labo Experience",
+      "sponsor_raw": "Upwind",
+      "location_raw": "Le Labo\nThe Wynn",
+      "added_raw": "10/18",
+      "registration_urls": [
+        "https://luma.com/le-labo-women-in-cyber"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Women in Cyber: The Le Labo Experience\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8cd15b274bf5",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 63,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "10:30AM–2PM",
+      "timezone": null,
+      "title": "Shift Gears at re:Invent: Racing Event with Plerion",
+      "sponsor_raw": "Plerion, C-Vision Intl, AWS,\nXBOW & Geordie AI",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/21",
+      "registration_urls": [
+        "https://luma.com/83ji8ar9"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Shift Gears at re:Invent: Racing Event with Plerion\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-cefe398384b1",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 64,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "11AM–12PM",
+      "timezone": null,
+      "title": "Unlock Legacy Database Budgets to Accelerate Modernization & AI Innovation",
+      "sponsor_raw": "Intel",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://web.cvent.com/event/11908510-ab2c-4e0f-b348-02f3adf933e3/register"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [
+        "ai_agents",
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Unlock Legacy Database Budgets to Accelerate Modernization & AI Innovation\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-e7da0bcdddb7",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 65,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "11AM–1:30PM",
+      "timezone": null,
+      "title": "Securing AI Agents in Production: Private Sessions with AWS & Britive",
+      "sponsor_raw": "Britive & AWS",
+      "location_raw": "Tower Suite\nCaesars Palace",
+      "added_raw": "11/3",
+      "registration_urls": [
+        "https://www.britive.com/resource/events/aws-reinvent-2026-britive"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [
+        "ai_agents",
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Securing AI Agents in Production: Private Sessions with AWS & Britive - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-663b380080fd",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 66,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "12–1:30 PM",
+      "timezone": null,
+      "title": "AI, FinOps & Observability Leaders Lunch",
+      "sponsor_raw": "Cloudgov.ai",
+      "location_raw": "Carmine's\nThe Forum Shops\nCaesars Palace",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://luma.com/9iccjhyt"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [
+        "ai_agents",
+        "observability",
+        "finops"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "AI, FinOps & Observability Leaders Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-33046bde76f0",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 67,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "12:30PM–",
+      "timezone": null,
+      "title": "Eat Your DB - Exclusive Lunch at SushiSAMBA",
+      "sponsor_raw": "Datafy & BigData Boutique",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://datafy.io/sushisamba-reinvent-bigdata-boutique/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "end_time_not_listed"
+      ],
+      "listing_text_raw": "Eat Your DB - Exclusive Lunch at SushiSAMBA\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8e1a7dc899e5",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 68,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "12:30–1:30PM",
+      "timezone": null,
+      "title": "HCLS & BFSI Executive Lunch",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "HCLS & BFSI Executive Lunch - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-145b3e12c122",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 69,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "12:30–2PM",
+      "timezone": null,
+      "title": "Exclusive Lunch at SushiSAMBA",
+      "sponsor_raw": "Excelien & Datafy",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://datafy.io/sushisamba-reinvent-excelien/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Exclusive Lunch at SushiSAMBA\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2a11b2935ccb",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 70,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "1–2:30PM",
+      "timezone": null,
+      "title": "CTO Lunch Reinvent",
+      "sponsor_raw": "HydraDB",
+      "location_raw": "Register to See Address\nCaesars Palace",
+      "added_raw": "10/16",
+      "registration_urls": [
+        "https://luma.com/nfv9qtqp"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "CTO Lunch Reinvent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-617e076a2bd1",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 71,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "2–3:30PM",
+      "timezone": null,
+      "title": "Exclusive Lunch at SushiSAMBA",
+      "sponsor_raw": "Directeam & Datafy",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://datafy.io/sushisamba-reinvent-directeam/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Exclusive Lunch at SushiSAMBA\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8d108941bce4",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 72,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "4–6PM",
+      "timezone": null,
+      "title": "Meet Brooksource at Stadia Bar",
+      "sponsor_raw": "Brooksource",
+      "location_raw": "Stadia Bar\nCaesars Palace",
+      "added_raw": "10/28",
+      "registration_urls": [
+        "https://www.brooksource.com/aws-reinvent"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Meet Brooksource at Stadia Bar\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-730676ff880d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 73,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "4:30–6:30PM",
+      "timezone": null,
+      "title": "Pit Stop: Hydrolix & Monad at F1 Arcade",
+      "sponsor_raw": "Hydrolix & Monad",
+      "location_raw": "F1 Arcade\nCaesars Palace",
+      "added_raw": "10/27",
+      "registration_urls": [
+        "https://luma.com/z0npkjtn"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Pit Stop: Hydrolix & Monad at F1 Arcade\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-e5a5dd854817",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 74,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "5–7PM",
+      "timezone": null,
+      "title": "AWS re:Invent 2026 Data Leaders Cocktail Hour",
+      "sponsor_raw": "DualBird, Logz.io, Allot & NeverBlink AI",
+      "location_raw": "North Show Terrace\nWynn",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/data-reinvent"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AWS re:Invent 2026 Data Leaders Cocktail Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-a4761ba02555",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 75,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "5–7PM",
+      "timezone": null,
+      "title": "Apexon Happy Hour",
+      "sponsor_raw": "Apexon",
+      "location_raw": "Bar Luca - The Venetian",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://www.apexon.com/aws-reinvent-2026/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Apexon Happy Hour - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-e7e5924bfd83",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 76,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "5–9PM",
+      "timezone": null,
+      "title": "Air Over Vegas: Take Al to New Heights",
+      "sponsor_raw": "Wiv Air & CloudTeam",
+      "location_raw": "Maverick Helicopters\n6075 S Las Vegas Blvd",
+      "added_raw": "10/20",
+      "registration_urls": [
+        "https://wiv.ai/events/air-over-vegas-take-ai-to-new-heights"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Air Over Vegas: Take Al to New Heights\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-8cbfbb46019b",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 77,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "5:30–7:30PM",
+      "timezone": null,
+      "title": "AssessShield Launch Party",
+      "sponsor_raw": "Cloudgov.ai",
+      "location_raw": "TAO Asian Bistro\nThe Venetian",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://cloudgov.ai/ooa/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AssessShield Launch Party\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-7e6aa577bbd5",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 78,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "5:30–8PM",
+      "timezone": null,
+      "title": "Sip & Scale: An Exclusive Evening with Cloudera and AWS",
+      "sponsor_raw": "Cloudera, Powered by AWS",
+      "location_raw": "Register to See Address",
+      "added_raw": "11/3",
+      "registration_urls": [
+        "https://attend.cloudera.com/sip-and-scale-danica-patrick-aws/aws-parties-site"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Sip & Scale: An Exclusive Evening with\nCloudera and AWS - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-33cda543a486",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 79,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "5:30–8PM",
+      "timezone": null,
+      "title": "Access, neat: An Evening of Whiskey, Champagne & Privileged Access",
+      "sponsor_raw": "1Password",
+      "location_raw": "The Encore\n3121 S Las Vegas Blvd",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://events.1password.io/access-neat-evening-of-whiskey"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Access, neat: An Evening of Whiskey, Champagne\n& Privileged Access - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-37b8d163e067",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 80,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "5:30–9PM",
+      "timezone": null,
+      "title": "Beyond re:Invent: Experience the Best of Las Vegas",
+      "sponsor_raw": "OpenObserve",
+      "location_raw": "Dinner Upscale Restaurant\nCaesars Palace\nVIP Helicopter Tour",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://na2.hubs.ly/H08cw-K0"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Beyond re:Invent: Experience the Best of Las Vegas\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-33bed8317615",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 81,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6PM–",
+      "timezone": null,
+      "title": "Resilience, Served Rare: A Private Dinner",
+      "sponsor_raw": "ControlMonkey",
+      "location_raw": "STK Las Vegas\nThe Cosmopolitan",
+      "added_raw": "10/15",
+      "registration_urls": [
+        "https://lp.controlmonkey.io/reinvent-private-stk-dinner-2026?utm_source=conferenceparties&utm_medium=listing&utm_campaign=reinvent26"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [
+        "end_time_not_listed"
+      ],
+      "listing_text_raw": "Resilience, Served Rare:\nA Private Dinner - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c86662107181",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 82,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "AI Insider: The Great Coding Reset (Reception)",
+      "sponsor_raw": "Dash0 & Business Insider",
+      "location_raw": "Catch\nARIA",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://events.businessinsider.com/ai-insider-las-vegas/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "ai_agents",
+        "development"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "AI Insider: The Great Coding Reset (Reception)\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-57c34e66707b",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 83,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "AMD Networking Reception",
+      "sponsor_raw": "AMD",
+      "location_raw": "Flight Club\nPalazzo, The Venetian",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://web.cvent.com/event/47c6819a-ca55-4e8b-a04a-33fa0224ccce/summary"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AMD Networking Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b48d2b96839e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 84,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "Taco Tuesday Tech Connect",
+      "sponsor_raw": "BairesDev",
+      "location_raw": "Toca Madera\nShops at Crystals\n3720 S Las Vegas Blvd",
+      "added_raw": "10/126",
+      "registration_urls": [
+        "https://luma.com/a9duyd99"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [
+        "added_date_malformed"
+      ],
+      "listing_text_raw": "Taco Tuesday Tech Connect\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-e5919d3a0f20",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 85,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "Customer & Partner Appreciation Party",
+      "sponsor_raw": "New Relic",
+      "location_raw": "Vista Cocktail Lounge\nCaesars Palace",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://newrelic.com/events/2026-12-01/happy-hour"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Customer & Partner Appreciation Party\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-24291efd6f61",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 86,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "Arctic Wolf re:Invent 2026 CISO Happy Hour",
+      "sponsor_raw": "Arctic Wolf, AWS, Databricks & Anthropic",
+      "location_raw": "Ramsay’s Kitchen\nHarrah’s",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://cybersecurity.arcticwolf.com/261201_RamsaysKitchenreInventCISOHappyHour.html"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Arctic Wolf re:Invent 2026 CISO Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-4a6f476db694",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 87,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "Cloud & Cocktails at PLAY",
+      "sponsor_raw": "Lucid Software, Cortex, Crash Override, incident.io, Miggo & Tailscale",
+      "location_raw": "Play Playground\nLuxor",
+      "added_raw": "10/5",
+      "registration_urls": [
+        "https://www.eventbrite.com/e/cloud-cocktails-at-play-tickets-1997894868333"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Cloud & Cocktails at PLAY\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-fa29cb8620fa",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 88,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "Shift into Happy Hour",
+      "sponsor_raw": "Thoughtworks",
+      "location_raw": "Opium Room\nTAO Asian Bistro\nThe Venetian",
+      "added_raw": "9/20",
+      "registration_urls": [
+        "https://events.thoughtworks.com/twshiftintohappyhour/ConferenceParties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Shift into Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-6b2368146c05",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 90,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Finops After Dark @re:Invent",
+      "sponsor_raw": "Finout",
+      "location_raw": "Rockhouse\nThe Venetian",
+      "added_raw": "9/20",
+      "registration_urls": [
+        "https://luma.com/fad-rdl4"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "finops"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Finops After Dark @re:Invent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-d3f735ff02dc",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 91,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Race to Revenue: Arrow Evening Reception",
+      "sponsor_raw": "Arrow",
+      "location_raw": "F1 Arcade\nCaesars Palace",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://arrow.swoogo.com/awsreinventreception/rta"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Race to Revenue: Arrow Evening Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-060103e7bc3a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 92,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Deepgram Speak Easy | Co-hosted by Krisp & Twilio",
+      "sponsor_raw": "Deepgram, Krisp & Twilio",
+      "location_raw": "Allē Lounge on 66\n111 Resorts World Ave",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://luma.com/reinvent-speak-easy?utm_campaign=58045796-1226%20AWS%20re%3Ainvent&utm_source=Event&utm_medium=Conference%20parties%20tracking%20URL&utm_content=URL%20for%20conference%20parties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Deepgram Speak Easy | Co-hosted by Krisp & Twilio\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-d224bcc50a95",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 93,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Full Throttle Happy Hour - Drift in a Shelby & Shift to What's Next",
+      "sponsor_raw": "Concierto by Trianz",
+      "location_raw": "Shelby Heritage Center\n6405 Ensworth St",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://bit.ly/4jci2hY"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Full Throttle Happy Hour - Drift in a Shelby\n& Shift to What's Next - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-dc43ddec23b3",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 94,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "AWS re:Invent 2026: After-Hours Social",
+      "sponsor_raw": "Rootly & ​Tailscale",
+      "location_raw": "The Oakroom\nRockhouse\nThe Venetian",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://luma.com/x3ftka38"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AWS re:Invent 2026: After-Hours Social\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c78074f47c0f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 95,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "The AWS re:Invent Helicopter Tour",
+      "sponsor_raw": "Scanner",
+      "location_raw": "Maverick Helicopters\n6075 S Las Vegas Blvd",
+      "added_raw": "10/27",
+      "registration_urls": [
+        "https://luma.com/scanner-fmqq"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "The AWS re:Invent Helicopter Tour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-a843acc5eb86",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 96,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "re:Mix at Spritz",
+      "sponsor_raw": "1Password",
+      "location_raw": "Spritz\nThe Venetian",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://events.1password.io/remixatspritz"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "re:Mix at Spritz\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-5dc115d239dc",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 97,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Secure the Sizzle with Trellix",
+      "sponsor_raw": "Trellix",
+      "location_raw": "Braseria by EDO\n3900 Paradise Rd",
+      "added_raw": "10/21",
+      "registration_urls": [
+        "https://events.trellix.com/SecuretheSizzle2026/ConferenceParties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Secure the Sizzle with Trellix\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-aede33032ef1",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 98,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "AWS re:Invent Pit Stop",
+      "sponsor_raw": "Render & Mastra",
+      "location_raw": "F1 Arcade\nCaesars Palace",
+      "added_raw": "10/15",
+      "registration_urls": [
+        "https://luma.com/ul0tgyw9"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AWS re:Invent Pit Stop\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-4953214868f9",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 99,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Executive Mastermind Dinner",
+      "sponsor_raw": "Copperhelm",
+      "location_raw": "Upscale Restaurant\nCosmopolitan",
+      "added_raw": "9/12",
+      "registration_urls": [
+        "https://luma.com/5g7wzhbr"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Executive Mastermind Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-1cb31c2c2309",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 100,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–10PM",
+      "timezone": null,
+      "title": "Agents Soundcheck",
+      "sponsor_raw": "Cartesia, Braintrust, LlamaIndex, Modal, Parallel & turbopuffer",
+      "location_raw": "On The Record Speakeasy\nPark MGM",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/agent-soundcheck?utm_source=conferenceparties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Agents Soundcheck\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-9c48bafd0349",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 101,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6–10PM",
+      "timezone": null,
+      "title": "House of Valkey 2026: Family Reunion",
+      "sponsor_raw": "Valkey",
+      "location_raw": "HaSalon\nPalazzo, The Venetian",
+      "added_raw": "10/26",
+      "registration_urls": [
+        "https://luma.com/qi5jgr7d?utm_source=conferenceparties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "House of Valkey 2026: Family Reunion\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-0d23833ae251",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 102,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6:30–8:30PM",
+      "timezone": null,
+      "title": "Going Beyond the Security Blueprint - An Executive Dinner",
+      "sponsor_raw": "Flywl, Foresite & Wiz",
+      "location_raw": "Hakkasan\nMGM Grand",
+      "added_raw": "11/7",
+      "registration_urls": [
+        "https://luma.com/15vc0v78"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Going Beyond the Security Blueprint - An Executive Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-999dbabe762e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 103,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6:30–8:30PM",
+      "timezone": null,
+      "title": "SushiSAMBA: Coder After Dark",
+      "sponsor_raw": "Coder",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "9/25",
+      "registration_urls": [
+        "https://luma.com/goslojhx"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "SushiSAMBA: Coder After Dark\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-20c06ea4b917",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 104,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6:30–9:30PM",
+      "timezone": null,
+      "title": "Somewhere Over the PR: An AI SDLC Evening at Sphere",
+      "sponsor_raw": "Hud",
+      "location_raw": "Sphere\n255 Sands Ave",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://luma.com/z7viu4b8"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [
+        "ai_agents",
+        "development"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Somewhere Over the PR:\nAn AI SDLC Evening at Sphere - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-604d205782e7",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 105,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "6:30–9:30PM",
+      "timezone": null,
+      "title": "Cybersecurity Leader Networking Dinner",
+      "sponsor_raw": "CISO Ventures & Friends",
+      "location_raw": "Four Seasons Hotel",
+      "added_raw": "9/2",
+      "registration_urls": [
+        "https://luma.com/434tayyl"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Cybersecurity Leader Networking Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b4cabe43359d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 106,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Steakhouse Social with Presidio",
+      "sponsor_raw": "Presidio",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "10/14",
+      "registration_urls": [
+        "https://invite.presidio.com/steakhousesocialpresidioreinvent2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Steakhouse Social with Presidio\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-1830d8d9e2da",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 107,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Dinner - Healing at Machine Speed The New Bank Heist",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Dinner - Healing at Machine Speed\nThe New Bank Heist - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-148e0208252a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 108,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "Startups After Dark: The AWS re:Invent Rooftop Party",
+      "sponsor_raw": "Automat-it",
+      "location_raw": "Omnia Nightclub\nCaesars Palace",
+      "added_raw": "11/7",
+      "registration_urls": [
+        "https://pages.automat-it.com/reinvent-rooftop-party-2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Startups After Dark: Request an Invite\nThe AWS re:Invent Rooftop Party",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-82120660b363",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 109,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "F1 Simulators with Archera & Labra",
+      "sponsor_raw": "Labra & Archera",
+      "location_raw": "F1 Arcade\nCaesars Palace",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/x6201711"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "F1 Simulators with Archera & Labra\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-15b87db14774",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 110,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "AI Trivia Night by Sanity. Sponsored by Temporal & Mastra",
+      "sponsor_raw": "Sanity, Temporal & Mastra",
+      "location_raw": "Register to See Address",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/TriviaDec26"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "AI Trivia Night by Sanity. Sponsored by Temporal & Mastra\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c97d641ad6a4",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 111,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "Agents After Dark at AWS re:Invent",
+      "sponsor_raw": "Vercel, Anthropic & Notio",
+      "location_raw": "CUT by Wolfgang Puck\nThe Venetian",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/agents-after-dark"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Agents After Dark at AWS re:Invent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b6850adb0a8d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 112,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "Datadog Off Leash",
+      "sponsor_raw": "Datadog",
+      "location_raw": "Brooklyn Bowl\n3545 S Las Vegas Blvd",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-datadog-appreciation-party/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [
+        "duplicate_listing"
+      ],
+      "listing_text_raw": "Datadog Off Leash\nRequest an Invite",
+      "related_listing_ids": [
+        "cp26-c47c2d73151f"
+      ],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c47c2d73151f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 113,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "Datadog Off Leash, Datadog Community Appreciation Party",
+      "sponsor_raw": "Datadog",
+      "location_raw": "Brooklyn Bowl\n3545 S Las Vegas Blvd",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-datadog-appreciation-party/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [
+        "duplicate_listing"
+      ],
+      "listing_text_raw": "Datadog Off Leash, Datadog Community Appreciation Party\nRequest an Invite",
+      "related_listing_ids": [
+        "cp26-b6850adb0a8d"
+      ],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-9c7bb859af29",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 114,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "Neo4j After Dark: VIP Backstage Pass",
+      "sponsor_raw": "Neo4j",
+      "location_raw": "The Barbershop Cuts & Cocktails\nCosmopolitan",
+      "added_raw": "10/26",
+      "registration_urls": [
+        "https://events.neo4j.com/neo4jreceptionaws2026?utm_source=third-party&utm_medium=organic-social&utm_campaign=exec"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Neo4j After Dark: VIP Backstage Pass\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-6cb786e6129f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 115,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7:15–9:30PM",
+      "timezone": null,
+      "title": "The Immersive Wizard of Oz Experience at Sphere with Drinks & Food",
+      "sponsor_raw": "Hexaware",
+      "location_raw": "Sphere\n255 Sands Ave",
+      "added_raw": "8/24",
+      "registration_urls": [],
+      "registration_status": "at_capacity",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Sorry. At Capacity\nThe Immersive Wizard of Oz Experience at Sphere\nwith Drinks & Food",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-55eb56333fa0",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 116,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7:30PM–",
+      "timezone": null,
+      "title": "The Rubrik Party at AWS re:Invent",
+      "sponsor_raw": "Rubrik",
+      "location_raw": "Omnia Nightclub",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://rubrik.registration.goldcast.io/events/609f6951-a243-44e0-88cf-705115b973c2"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [
+        "end_time_not_listed"
+      ],
+      "listing_text_raw": "The Rubrik Party at AWS re:Invent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-35477c6ad52a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 117,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "7:30–10PM",
+      "timezone": null,
+      "title": "Cloud Security Leaders Dinner at Carbone",
+      "sponsor_raw": "Aryon Security",
+      "location_raw": "Carbone\nARIA",
+      "added_raw": "11/7",
+      "registration_urls": [
+        "https://luma.com/user/usr-JlfYZsC3ku67UQM"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "security",
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Cloud Security Leaders Dinner at Carbone\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-e70c353144ad",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 118,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "8–10PM",
+      "timezone": null,
+      "title": "AI, FinOps & Observability Leaders Dinner",
+      "sponsor_raw": "Cloudgov.ai",
+      "location_raw": "TAO Asian Bistro & Nightclub\nThe Venetian",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://luma.com/o1pqx5yy"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "ai_agents",
+        "observability",
+        "finops"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "AI, FinOps & Observability Leaders Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-d8500fbc0656",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 119,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "8–10PM",
+      "timezone": null,
+      "title": "Devoteam, AWS & Wiz Executive Reception",
+      "sponsor_raw": "Devoteam, AWS & Wiz",
+      "location_raw": "Brasserie B\nCaesars Palace",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://www.devoteam.com/lets-connect-at-aws-reinvent/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Devoteam, AWS & Wiz Executive Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2a28adcd4a3e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 120,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "8PM–12AM",
+      "timezone": null,
+      "title": "Attribute & DoiT à Paris: An Evening Above the Strip",
+      "sponsor_raw": "DoiT",
+      "location_raw": "Chéri Rooftop\nParis LV",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.doit.com/event/AttributeinParis/summary"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Attribute & DoiT à Paris: An Evening Above the Strip\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-9e7cdbe0c92c",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 121,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "8:45–10:45PM",
+      "timezone": null,
+      "title": "Seek & Score Social",
+      "sponsor_raw": "The New Stack, Sourcegraph & OpsLevel",
+      "location_raw": "Flight Club\nPalazzo, The Venetian",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://www.eventbrite.com/e/2004183502808"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Seek & Score Social\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-25ea96dc9625",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 122,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "8:45–11:45PM",
+      "timezone": null,
+      "title": "Flight Club with PlanetScale, Laravel & Sentry",
+      "sponsor_raw": "PlanetScale, Laravel & Sentry",
+      "location_raw": "Flight Club\nPalazzo, The Venetian",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://luma.com/planet-1sbk"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Flight Club with PlanetScale, Laravel & Sentry\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-0f7b430827c3",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 123,
+      "date": "2026-12-01",
+      "day_raw": "Tuesday",
+      "time_raw": "9PM–12AM",
+      "timezone": null,
+      "title": "House Party Featuring The Chainsmokers!",
+      "sponsor_raw": "ClickHouse",
+      "location_raw": "Intrigue Nightclub\nWynn",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://clickhouse.com/houseparty/reinvent"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [
+        "possible_date_conflict"
+      ],
+      "listing_text_raw": "House Party Featuring The Chainsmokers!\nRequest an Invite",
+      "related_listing_ids": [
+        "cp26-d0eb5453fee6"
+      ],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-f03d370b47af",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 127,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–8:25AM",
+      "timezone": null,
+      "title": "Breakfast: Datadog Public Sector Community",
+      "sponsor_raw": "Datadog",
+      "location_raw": "Bazaar Meat\nPalazzo, The Venetian",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-public-sector-breakfast/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Breakfast: Datadog Public Sector Community\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-cbb7a40f349c",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 128,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–8:30AM",
+      "timezone": null,
+      "title": "Own Your Intelligence: Breakfast Panel with LangChain, Factory & NVIDIA",
+      "sponsor_raw": "LangChain",
+      "location_raw": "TAO Asian Bistro\nThe Venetian",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/3kjztmsw"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Own Your Intelligence: Request an Invite\nBreakfast Panel with LangChain, Factory & NVIDIA",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-4ac8e31a1c85",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 129,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "8–9AM",
+      "timezone": null,
+      "title": "Breakfast - Modernization Without the Multi-Year Risk",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Breakfast - Modernization Without the\nMulti-Year Risk - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2e32452acb46",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 130,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "8–10AM",
+      "timezone": null,
+      "title": "SHE:can re:Invent Networking Coffee",
+      "sponsor_raw": "PCAN.cloud & Orion Innovation",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/15",
+      "registration_urls": [
+        "https://luma.com/1xw154pn?utm_source=conferenceparties&utm_medium=directory&utm_campaign=reinvent2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "SHE:can re:Invent Networking Coffee\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-6ce1fec80f7a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 131,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "8–10AM",
+      "timezone": null,
+      "title": "InnovatHERs Networking Breakfast",
+      "sponsor_raw": "Elastic & AWS",
+      "location_raw": "CUT by Wolfgang Puck\nThe Venetian",
+      "added_raw": "10/7",
+      "registration_urls": [
+        "hhttps://events.elastic.co/innovathersataws/ConferenceParties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [
+        "malformed_registration_url"
+      ],
+      "listing_text_raw": "InnovatHERs Networking Breakfast\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-7756bbb451da",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 133,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "10AM–",
+      "timezone": null,
+      "title": "18 Holes with Basis",
+      "sponsor_raw": "Basis",
+      "location_raw": "Bali Hai Golf Club\n5160 S Las Vegas Blvd",
+      "added_raw": "10/21",
+      "registration_urls": [
+        "https://app.basisworldwide.com/18-holes?utm_source=cp&utm_medium=txt&utm_campaign=18txt&utm_id=18txt"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [
+        "end_time_not_listed"
+      ],
+      "listing_text_raw": "18 Holes with Basis\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-aec4541aaa74",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 134,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "10AM–12PM",
+      "timezone": null,
+      "title": "Amazon Sidewalk & Edge AI Hands-on Technical Adventure + Jumanji 4D & 7D Experiences",
+      "sponsor_raw": "Avnet",
+      "location_raw": "Madame Tussauds\nThe Venetian",
+      "added_raw": "10/8",
+      "registration_urls": [
+        "https://forms.cloud.microsoft/pages/responsepage.aspx?id=mycgiL7A3kuD7f5rb5ck1aA2qLvFH5lBtqWs1cOZjT1UQUU0TjVZT1pITFhWUlZaMU1YVDExU0pQSCQlQCN0PWcu&route=shorturl"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Amazon Sidewalk & Edge AI Hands-on Technical Adventure + Jumanji 4D & 7D Experiences\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-61f3fea81a6f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 135,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "12:30–1:30PM",
+      "timezone": null,
+      "title": "Energy & Resources Executive Lunch",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Energy & Resources Executive Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-ca3d46a2d89e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 136,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "1–2:30PM",
+      "timezone": null,
+      "title": "Exclusive Lunch at SushiSAMBA",
+      "sponsor_raw": "Excelien & Datafy",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://datafy.io/sushisamba-reinvent-excelien/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Exclusive Lunch at SushiSAMBA\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-4d35b3113761",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 137,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "1–2:30PM",
+      "timezone": null,
+      "title": "CTO Lunch Re:Invent, part of CTOLunches.com",
+      "sponsor_raw": "Archera",
+      "location_raw": "Register to See Address\nIn Caesars Palace",
+      "added_raw": "8/25",
+      "registration_urls": [
+        "https://luma.com/94nhxjot"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "CTO Lunch Re:Invent, part of CTOLunches.com\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-d485739b0697",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 138,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "4:30–6PM",
+      "timezone": null,
+      "title": "Expo Happy Hour",
+      "sponsor_raw": "AWS & Partners",
+      "location_raw": "Expo Hall\nThe Venetian",
+      "added_raw": "8/24",
+      "registration_urls": [],
+      "registration_status": "not_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Expo Happy Hour",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-42aa56880fca",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 139,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5–7PM",
+      "timezone": null,
+      "title": "AWS re:Invent: Tailscale Happy Hour",
+      "sponsor_raw": "Tailscale",
+      "location_raw": "Vista Cocktail Lounge\nCaesars Palace",
+      "added_raw": "11/5",
+      "registration_urls": [
+        "https://luma.com/n68xcyez"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AWS re:Invent: Tailscale Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-242e7009006d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 140,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5–8PM",
+      "timezone": null,
+      "title": "45 RPM: Ramp & ClickHouse",
+      "sponsor_raw": "Ramp & Clickhouse",
+      "location_raw": "The Vinyl Room\nMandalay Bay",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/mqv2uyje"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "45 RPM: Ramp & ClickHouse\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-97b8ca52f3f3",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 141,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5–8PM",
+      "timezone": null,
+      "title": "Cocktails, Conversation & the Future of Software Engineering",
+      "sponsor_raw": "Cognition & Infosys",
+      "location_raw": "Zero Bond\nWynn",
+      "added_raw": "10/30",
+      "registration_urls": [
+        "https://cognition.com/events/reinvent-after-hours"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "development"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Cocktails, Conversation & the Future of\nSoftware Engineering - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-08505abeadb4",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 142,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5:30–7:30PM",
+      "timezone": null,
+      "title": "Context & Cocktails with LangChain & MongoDB",
+      "sponsor_raw": "LangChain & MongoDB",
+      "location_raw": "Sugarcane\nThe Venetian",
+      "added_raw": "11/4",
+      "registration_urls": [
+        "https://luma.com/ffbk3mnc"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Context & Cocktails with LangChain & MongoDB\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-73c993181a0e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 143,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5:30–7:30PM",
+      "timezone": null,
+      "title": "Take a Break From re:Invent",
+      "sponsor_raw": "Kloia & Vfunction",
+      "location_raw": "Chayo Mexican Kitchen\n& Tequila Bar - The LINQ",
+      "added_raw": "11/3",
+      "registration_urls": [
+        "https://hi.kloia.com/reinvent-2026-happy-hour"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Take a Break From re:Invent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-39b2a1b23059",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 144,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5:30–8:30PM",
+      "timezone": null,
+      "title": "Wine & Dine Executive Reception",
+      "sponsor_raw": "Commit & Wiz",
+      "location_raw": "Terrace Pointe Café\nWynn",
+      "added_raw": "10/4",
+      "registration_urls": [
+        "https://luma.com/kmqfz9et"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Wine & Dine Executive Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-ceef901a79cc",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 145,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5:30–9PM",
+      "timezone": null,
+      "title": "Beyond re:Invent: A VIP Evening in Las Vegas Dinner, Limo Tour & VIP Helicopter Tour Tech Execs Only",
+      "sponsor_raw": "OpenObserve",
+      "location_raw": "Dinner Upscale Restaurant\nCaesars Palace",
+      "added_raw": "10/14",
+      "registration_urls": [
+        "https://na2.hubs.ly/H08n5tV0"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [
+        "Tech Execs Only"
+      ],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Beyond re:Invent: A VIP Evening in Las Vegas\nDinner, Limo Tour & VIP Helicopter Tour\nTech Execs Only - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-3c55d627f4d2",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 146,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "5:30–10:30PM",
+      "timezone": null,
+      "title": "Seed to Speed: Cybersecurity Startup Showcase",
+      "sponsor_raw": "CISO Ventures & Friends",
+      "location_raw": "The Venetian",
+      "added_raw": "9/2",
+      "registration_urls": [
+        "https://luma.com/uum4472x"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Seed to Speed: Cybersecurity Startup Showcase\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2af960ca3007",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 147,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "AI in Motion: An Atos & BMC Networking Reception",
+      "sponsor_raw": "Atos & BMC",
+      "location_raw": "Cañonita\nThe Venetian Shoppes",
+      "added_raw": "11/2",
+      "registration_urls": [
+        "https://pages.atos.net/atos-bmc-networking-reception-atos"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "AI in Motion: An Atos & BMC Networking Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8690c6b30bc9",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 148,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–8PM",
+      "timezone": null,
+      "title": "Exclusive Cloud Dinner",
+      "sponsor_raw": "SPIKE by Directeam",
+      "location_raw": "Gordon Ramsay's Kitchen\nHarrah's",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://hubs.li/Q04CYMQ90"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Exclusive Cloud Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-aee001d386cb",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 149,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–8:30PM",
+      "timezone": null,
+      "title": "Supper Club at AWS re:Invent with Ramp & Stripe",
+      "sponsor_raw": "Stripe & Ramp",
+      "location_raw": "Gymkhana\nARIA",
+      "added_raw": "11/3",
+      "registration_urls": [
+        "https://luma.com/StripexRamp"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Supper Club at AWS re:Invent with Ramp & Stripe\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-cd9d4b903d93",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 150,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–8:30PM",
+      "timezone": null,
+      "title": "Every Layer of AWS. One Line of Sight.",
+      "sponsor_raw": "Datadog, GitLab, Atlassian, Temporal, Supabase & HashiCorp",
+      "location_raw": "Bazaar Meat\nPalazzo, The Venetian",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-partner-happy-hour/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Every Layer of AWS. One Line of Sight.\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-c2d7a34c2f30",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 152,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "AWS re:Invent 2026 Social Hour",
+      "sponsor_raw": "Twingate, Rootly AI & Logz.io",
+      "location_raw": "INDUSTRIAL event space\n2330 S Industrial Rd",
+      "added_raw": "10/30",
+      "registration_urls": [
+        "https://luma.com/i99nfjls?utm_source=conferenceparties&utm_medium=social&utm_campaign=banner"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AWS re:Invent 2026 Social Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-fa0bc9ed4223",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 153,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Partner & AWS Appreciation Happy Hour",
+      "sponsor_raw": "Concierto by Trianz",
+      "location_raw": "Hard Shake\nWaldorf Astoria",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://bit.ly/479WTgY"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Partner & AWS Appreciation Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2f0052b11a5d",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 154,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Place Your Bets on the Future of AI",
+      "sponsor_raw": "Notion",
+      "location_raw": "Vanderpump Gardens\nThe Venetian",
+      "added_raw": "10/21",
+      "registration_urls": [
+        "https://luma.com/notion-eget"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Place Your Bets on the Future of AI\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-f529ac24b5ca",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 155,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "A Cut Above The Rest Reception",
+      "sponsor_raw": "Elastic & AWS",
+      "location_raw": "CUT by Wolfgang Puck\nThe Venetian",
+      "added_raw": "10/7",
+      "registration_urls": [
+        "https://events.elastic.co/awsacutabovetherest/ConferenceParties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "A Cut Above The Rest Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-4d1b12a7877f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 156,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Executive Mastermind Dinner",
+      "sponsor_raw": "Kai Security",
+      "location_raw": "Upscale Restaurant\nCosmopolitan",
+      "added_raw": "9/12",
+      "registration_urls": [
+        "https://luma.com/czcx4j10"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Executive Mastermind Dinner\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-5953cc65c655",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 157,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6:30–8:30PM",
+      "timezone": null,
+      "title": "Antithesis & LeadDev Engineering Leaders Reception",
+      "sponsor_raw": "Antithesis & Lead Dev",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/20",
+      "registration_urls": [
+        "https://luma.com/antith-tyid"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "development"
+      ],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Antithesis & LeadDev Engineering\nLeaders Reception - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-0d6afbb253fa",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 158,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "6:30–9:30PM",
+      "timezone": null,
+      "title": "The Modern Software Factory: An Executive Dinner at re:Invent",
+      "sponsor_raw": "Hud & ClickHouse",
+      "location_raw": "Gordon Ramsay Hell's Kitchen\nCaesars Palace",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://luma.com/jbj2va14"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "development"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "The Modern Software Factory:\nAn Executive Dinner at re:Invent - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-dc1382cb3b70",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 159,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "The Next Level: Executive Dinner - Connect, Exchange Ideas & Drive What's Next",
+      "sponsor_raw": "Thoughtworks",
+      "location_raw": "Carbone Riviera\nBellagio",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://cdm.events/custom/thoughtworks2/?refid=mktg-a-cp-thought-awsreinvent2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "The Next Level: Executive Dinner - Request an Invite\nConnect, Exchange Ideas & Drive What's Next",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8192bdcdb4c4",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 160,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Kick Your Feet Up in a Premium Suite with Scanner at The Sphere",
+      "sponsor_raw": "Scanner",
+      "location_raw": "Sphere\n255 Sands Ave",
+      "added_raw": "10/27",
+      "registration_urls": [
+        "https://luma.com/scanner-ksg3"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Kick Your Feet Up in a Premium Suite with Scanner at The Sphere - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c21dcf00f064",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 161,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Robots Pour, Agents Ship: re:Invent Happy Hour with GitKraken & Hud",
+      "sponsor_raw": "Hud & GitKraken",
+      "location_raw": "The Tipsy Robot\nGrand Canal Shoppes\nThe Venetian",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://luma.com/xec7trx4"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Robots Pour, Agents Ship: Request an Invite\nre:Invent Happy Hour with GitKraken & Hud",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-bada724a923f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 162,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Dinner - One Source of Truth",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Dinner - One Source of Truth\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2557f03f3571",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 163,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "Agents After Dark Masquerade",
+      "sponsor_raw": "1Password",
+      "location_raw": "Grand Lux Café\nThe Venetian",
+      "added_raw": "10/23",
+      "registration_urls": [
+        "https://events.1password.io/agentsafterdarkmasquerade"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Agents After Dark Masquerade\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-3b2ac330a815",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 164,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "1923 Prohibition Party",
+      "sponsor_raw": "Honeycomb.io, AWS, Checkly, Cloudelligent & Depot",
+      "location_raw": "1923 Prohibition Bar\nGrand Canal Shoppes\nThe Venetian",
+      "added_raw": "10/18",
+      "registration_urls": [
+        "https://www.honeycomb.io/events/the-1923-secret-social"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "1923 Prohibition Party\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-e214cc272b95",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 165,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7PM–12AM",
+      "timezone": null,
+      "title": "Duckbill/Last Week in AWS + Heavybit + RedMonk at re:Invent 2026",
+      "sponsor_raw": "Duckbill/Last Week in AWS, Heavybit & RedMonk",
+      "location_raw": "Atomic Liquors\n917 E Fremont St",
+      "added_raw": "8/29",
+      "registration_urls": [
+        "https://luma.com/pre1zzw3"
+      ],
+      "registration_status": "registration_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Duckbill/Last Week in AWS + Heavybit\n+ RedMonk at re:Invent 2026 Register Now",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-3eec94128a3b",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 166,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7:30–10:30PM",
+      "timezone": null,
+      "title": "AWS re:Invent After Hours with NeuBird",
+      "sponsor_raw": "NeuBird, FluidCloud\n& Tiger Data",
+      "location_raw": "TAO Nightclub\nThe Venetian",
+      "added_raw": "10/20",
+      "registration_urls": [
+        "https://na2.hubs.ly/H08wjYm0"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "AWS re:Invent After Hours with NeuBird\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-9be016fe827a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 167,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "7:30–10:30PM",
+      "timezone": null,
+      "title": "AI in Motion: After Hours",
+      "sponsor_raw": "Slalom",
+      "location_raw": "Ole Red\n3627 S Las Vegas Blvd",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://go.slalom.com/ai-afterhours"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "AI in Motion: After Hours\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-3f739e3ba7db",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 168,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "8:30–11:30PM",
+      "timezone": null,
+      "title": "Afterparty @ re:Invent",
+      "sponsor_raw": "Eon",
+      "location_raw": "Juliet Cocktail Room\nThe Venetian",
+      "added_raw": "10/23",
+      "registration_urls": [
+        "https://luma.com/below-deck?utm_medium=third_party&utm_source=conference_parties&utm_campaign=26Q4_Event_AWS_reInvent_HappyHour_120326&utm_content="
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Afterparty @ re:Invent\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8dc9fb141ecf",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 169,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "Evening",
+      "timezone": null,
+      "title": "The re:Invent Happy Hour",
+      "sponsor_raw": "Intuitive.ai, Zepo,\nDevRev & QuilrAI",
+      "location_raw": "Register to See Address",
+      "added_raw": "10//6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published",
+        "exact_time_not_listed",
+        "added_date_malformed"
+      ],
+      "listing_text_raw": "The re:Invent Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-51def1cadb52",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 170,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "9PM–12AM",
+      "timezone": null,
+      "title": "Cores & Scores: An Arm & AWS Networking Reception",
+      "sponsor_raw": "Arm & AWS",
+      "location_raw": "Flight Club\nPalazzo, The Venetian",
+      "added_raw": "11/7",
+      "registration_urls": [
+        "https://events.arm.com/coresandscores?utm_source=conferenceparties&utm_medium=referral&utm_campaign=coresandscores2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Cores & Scores: An Arm & AWS Networking Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-df65b6ad7fdf",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 171,
+      "date": "2026-12-02",
+      "day_raw": "Wednesday",
+      "time_raw": "9PM–1AM",
+      "timezone": null,
+      "title": "Mission Cloud Ignite'26 Special Performance by Nelly",
+      "sponsor_raw": "Mission Cloud, a CDW Company, AMD, Nutanix & Wiz",
+      "location_raw": "OMNIA Nightclub\nCaesars Palace",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://www.missioncloud.com/events/ignite-2026"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Mission Cloud Ignite'26\nSpecial Performance by Nelly - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-a0a42b5f8546",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 175,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "8–9AM",
+      "timezone": null,
+      "title": "Breakfast - AI-Ready Operations",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Breakfast - AI-Ready Operations - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-cba9b595636c",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 176,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "8–11AM",
+      "timezone": null,
+      "title": "The GTM Game Changer: Data & Context",
+      "sponsor_raw": "Snowflake",
+      "location_raw": "Caneletto\nThe Venetian",
+      "added_raw": "10/21",
+      "registration_urls": [
+        "https://luma.com/notion-pv77"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "The GTM Game Changer: Data & Context\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-573e2c3095c4",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 177,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "8:30–10:30AM",
+      "timezone": null,
+      "title": "Thursday Breakfast",
+      "sponsor_raw": "TrendAI™",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://resources.trendaisecurity.com/aws-reinvent-26-events.html"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Thursday Breakfast\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-41fa63bf9339",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 178,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "10AM–12PM",
+      "timezone": null,
+      "title": "Gruntwork VIP Racing Experience",
+      "sponsor_raw": "Gruntwork",
+      "location_raw": "Las Vegas Speedway\n7000 Las Vegas Blvd N",
+      "added_raw": "10/15",
+      "registration_urls": [
+        "https://www.gruntwork.io/lp/gruntwork-racing"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Gruntwork VIP Racing Experience\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-1a3da34a1a3b",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 179,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "11:30AM–1:30PM",
+      "timezone": null,
+      "title": "Thursday Lunch",
+      "sponsor_raw": "TrendAI™",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://resources.trendaisecurity.com/aws-reinvent-26-events.html"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Thursday Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-aa403310e443",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 180,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "12–1:30PM",
+      "timezone": null,
+      "title": "Scaling Security: SPARK-ing Joint Growth Partners Only",
+      "sponsor_raw": "Elastic & AWS",
+      "location_raw": "CUT by Wolfgang Puck\nThe Venetian",
+      "added_raw": "10/26",
+      "registration_urls": [
+        "https://events.elastic.co/SPARKPartnerLunchwithAWS/ConferenceParties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [
+        "Partners Only"
+      ],
+      "category": "lunch",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Scaling Security: SPARK-ing Joint Growth\nPartners Only - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-dbb5b7014489",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 181,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "12:30–1:30PM",
+      "timezone": null,
+      "title": "Manufacturing & Logistics Executive Lunch",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Manufacturing & Logistics Executive Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-7d657c6c9b0a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 182,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "12:30–2PM",
+      "timezone": null,
+      "title": "Exclusive Lunch at SushiSAMBA",
+      "sponsor_raw": "Excelien & Datafy",
+      "location_raw": "SushiSAMBA\nThe Venetian",
+      "added_raw": "11/1",
+      "registration_urls": [
+        "https://datafy.io/sushisamba-reinvent-excelien/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Exclusive Lunch at SushiSAMBA\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-ecff67dfd92a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 183,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "1–2:30PM",
+      "timezone": null,
+      "title": "Reinvent CTO Lunch",
+      "sponsor_raw": "TBA",
+      "location_raw": "TBA\nCaesars Palace",
+      "added_raw": "10/29",
+      "registration_urls": [
+        "https://luma.com/xu1fmw7v"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Reinvent CTO Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-7c612205e24f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 184,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "3:30–5PM",
+      "timezone": null,
+      "title": "NetApp Automotive & Semiconductor Roundtable",
+      "sponsor_raw": "NetApp",
+      "location_raw": "Spritz\nThe Venetian",
+      "added_raw": "10/29",
+      "registration_urls": [
+        "https://luma.com/cb3abu8i"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "NetApp Automotive & Semiconductor Roundtable\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-2d545738e6c6",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 186,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "4–5:30PM",
+      "timezone": null,
+      "title": "pre:Play Happy Hour",
+      "sponsor_raw": "Elastic & AWS",
+      "location_raw": "CUT by Wolfgang Puck\nThe Venetian",
+      "added_raw": "10/8",
+      "registration_urls": [
+        "https://events.elastic.co/preplayhappyhourwithelasticata/ConferenceParties"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "pre:Play Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-f910f1ef3b0e",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 187,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "4–7PM",
+      "timezone": null,
+      "title": "Redis Agent Arena Partner Happy Hour",
+      "sponsor_raw": "Redis, Baseten\n& Langchain",
+      "location_raw": "Juliet Cocktail Room\nThe Venetian",
+      "added_raw": "10/26",
+      "registration_urls": [
+        "https://redis.io/events/agent-arena-at-aws-reinvent-2026/?utm_medium=referral-employee-sm&utm_source=employee&utm_campaign=sales-invite-aws-reinvent"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "ai_agents"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Redis Agent Arena Partner Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-9b43fed42f3f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 188,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "4–7PM",
+      "timezone": null,
+      "title": "Thursday Happy Hour",
+      "sponsor_raw": "TrendAI™",
+      "location_raw": "Fogo de Chão\nThe Venetian",
+      "added_raw": "10/12",
+      "registration_urls": [
+        "https://resources.trendaisecurity.com/aws-reinvent-26-events.html"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Thursday Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-9ac5271986a9",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 189,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "5–6PM",
+      "timezone": null,
+      "title": "Who Let the Agents In? - A Private Dinner for Security Leaders",
+      "sponsor_raw": "Agentic Fabriq",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/26",
+      "registration_urls": [
+        "https://www.agenticfabriq.com/reinvent/private-dinner"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [
+        "ai_agents",
+        "security"
+      ],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Who Let the Agents In? - Request an Invite\nA Private Dinner for Security Leaders",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b36b8a9ba3cd",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 190,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "5–8PM",
+      "timezone": null,
+      "title": "CISO Strategy Salon",
+      "sponsor_raw": "Exaforce",
+      "location_raw": "CarverSteak\nResorts World",
+      "added_raw": "11/7",
+      "registration_urls": [
+        "https://luma.com/58m3v3a2"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "technical_discussion",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "CISO Strategy Salon\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "medium",
+      "category_basis": "editorial interpretation of title and visible venue/context"
+    },
+    {
+      "id": "cp26-53ba56078331",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 191,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "5:30–8PM",
+      "timezone": null,
+      "title": "Recovery Cocktail: Private Happy Hour at Flight Club",
+      "sponsor_raw": "ControlMonkey",
+      "location_raw": "Flight Club\nPalazzo, The Venetian",
+      "added_raw": "10/15",
+      "registration_urls": [
+        "https://luma.com/3jy18etl?utm_source=conferenceparties&utm_medium=listing&utm_campaign=reinvent26"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "Recovery Cocktail: Private Happy Hour at Flight Club\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b8a158063112",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 192,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "6–7:30PM",
+      "timezone": null,
+      "title": "APJ Community Happy Hour",
+      "sponsor_raw": "Datadog",
+      "location_raw": "Bazaar Meat\nPalazzo, The Venetian",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-apj-happy-hour/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "APJ Community Happy Hour\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-b63b8ad54a7f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 193,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "6–9PM",
+      "timezone": null,
+      "title": "Watchdog: Off Duty - Datadog Security Reception",
+      "sponsor_raw": "Datadog",
+      "location_raw": "La Cave\nWynn",
+      "added_raw": "10/31",
+      "registration_urls": [
+        "https://events.datadoghq.com/aws-reinvent/events-datadog-security-reception/"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "happy_hour_reception",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Watchdog: Off Duty - Datadog Security Reception\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-bc8b12948276",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 194,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Dinner - Beyond the Pilot",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Dinner - Beyond the Pilot - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-0e4c940af3c5",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 195,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "7–10PM",
+      "timezone": null,
+      "title": "North.cloud Private Suite: Golden Knights vs. Utah Mammoth",
+      "sponsor_raw": "North.cloud",
+      "location_raw": "T-Mobile Arena\n3780 S Las Vegas Blvd",
+      "added_raw": "10/22",
+      "registration_urls": [
+        "https://luma.com/north-hbdj"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [
+        "cloud_platform"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "North.cloud Private Suite: Golden Knights vs. Utah Mammoth\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-0c195ff0659a",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 196,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "7:30PM–12AM\nShuttles 7PM",
+      "timezone": null,
+      "title": "re:Play Party",
+      "sponsor_raw": "AWS",
+      "location_raw": "Las Vegas\nFestival Grounds",
+      "added_raw": "8/10",
+      "registration_urls": [],
+      "registration_status": "not_listed",
+      "restrictions_raw": [],
+      "category": "party_nightlife",
+      "topic_tags": [],
+      "quality_flags": [],
+      "listing_text_raw": "re:Play Party",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-8225a0ed475f",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 197,
+      "date": "2026-12-03",
+      "day_raw": "Thursday",
+      "time_raw": "8–10PM",
+      "timezone": null,
+      "title": "Behind the Curtain: - An Evening at Sphere for Security Leaders",
+      "sponsor_raw": "Agentic Fabriq",
+      "location_raw": "Sphere\n255 Sands Ave",
+      "added_raw": "10/26",
+      "registration_urls": [
+        "https://www.agenticfabriq.com/reinvent/sphere"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "experience_sports",
+      "topic_tags": [
+        "security"
+      ],
+      "quality_flags": [],
+      "listing_text_raw": "Behind the Curtain: - Request an Invite\nAn Evening at Sphere for Security Leaders",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-cce95535ddcd",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 201,
+      "date": "2026-12-04",
+      "day_raw": "Friday",
+      "time_raw": "8–9AM",
+      "timezone": null,
+      "title": "Breakfast - Final Connections",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "breakfast_coffee",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Breakfast - Final Connections - Request an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-62f52e475658",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 202,
+      "date": "2026-12-04",
+      "day_raw": "Friday",
+      "time_raw": "12:30–1:30PM",
+      "timezone": null,
+      "title": "Retail Executive Lunch",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "lunch",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Retail Executive Lunch\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    },
+    {
+      "id": "cp26-c7b23eece490",
+      "source_url": "https://conferenceparties.com/reinvent2026/",
+      "source_row_index": 203,
+      "date": "2026-12-04",
+      "day_raw": "Friday",
+      "time_raw": "7–9PM",
+      "timezone": null,
+      "title": "Dinner - The Next Move",
+      "sponsor_raw": "Intuitive.ai",
+      "location_raw": "Register to See Address",
+      "added_raw": "10/6",
+      "registration_urls": [
+        "https://intuitive.ai/events/aws-reinvent-2026/#agenda"
+      ],
+      "registration_status": "invite_request_link_listed",
+      "restrictions_raw": [],
+      "category": "dinner",
+      "topic_tags": [],
+      "quality_flags": [
+        "location_not_fully_published"
+      ],
+      "listing_text_raw": "Dinner - The Next Move\nRequest an Invite",
+      "related_listing_ids": [],
+      "category_confidence": "high",
+      "category_basis": "advertised event title or explicit listing context"
+    }
+  ]
+}

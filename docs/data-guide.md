@@ -30,7 +30,7 @@ The source has no per-session URL or explicit timezone field. Do not invent eith
 5. For cross-topic statistics, count groups with both the specified topic and the `Agentic AI` area-of-interest tag. The denominator is the count for the specified topic.
 6. Sponsored sessions are included in the overall statistics. The main practical shortlist does not use sponsored sessions.
 
-`scripts/catalog.py stats --write` regenerates `data/stats.json` deterministically. There are no keyword-inferred tags and no model calls in this calculation.
+The [project skill](../.agents/skills/reinvent-research/SKILL.md) describes how to regenerate `data/stats.json` deterministically using this methodology. There are no keyword-inferred session tags or model calls in this calculation.
 
 ## Curation
 
@@ -44,8 +44,8 @@ The source has no per-session URL or explicit timezone field. Do not invent eith
 - `trends`: interpretive forecasts, confidence labels, reasoning, and supporting codes. Confidence is qualitative, not a statistical probability.
 - `supporting_sessions`: additional codes discussed in the analysis.
 
-The catalog is the source for titles, abstracts, times, and venues. `shortlist` joins each recommendation with all matching-title occurrences, preserving the original metadata. `show CODE --repeats` similarly expands a single code to its repeat group.
+The catalog is the source for titles, abstracts, times, and venues. The project skill joins recommendations by exact code and expands matching-title occurrences when repeat options are requested, preserving original metadata.
 
 ## Validation
 
-`python3 scripts/catalog.py validate` checks source integrity, nonempty and unique codes, required field types, every curated session reference, and consistency of stored versus regenerated statistics. It does not validate the catalog against a live AWS website or guarantee that recommendations remain current.
+Follow the project skill's [validation reference](../.agents/skills/reinvent-research/references/validation.md) to check source integrity, unique codes, required field types, curated references, and stored versus recomputed statistics. These checks do not validate the catalog against a live AWS website or guarantee that recommendations remain current. External events use a [separate schema](parties-data-guide.md) and are excluded from session statistics.
