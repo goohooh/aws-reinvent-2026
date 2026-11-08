@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "analysis_date": "2026-11-05",
+  "prepared_on": "2026-11-08",
+  "forecast_horizon_months": {
+    "minimum": 6,
+    "maximum": 12,
+    "relative_to": "analysis_date"
+  },
+  "language": "ko",
+  "audience": [
+    "AI Ops",
+    "Security",
+    "CLI agents",
+    "skills",
+    "MCP",
+    "QA automation"
+  ],
+  "basis": "Interpretation of supplied session titles and abstracts; not delivered-talk or launch verification.",
+  "overview_flows": [
+    {
+      "id": "production",
+      "theme_ko": "프로덕션에 올리기",
+      "session_codes": [
+        "KEY003",
+        "AIM212"
+      ]
+    },
+    {
+      "id": "build_to_operate",
+      "theme_ko": "개발부터 운영까지 연결하기",
+      "session_codes": [
+        "DVT307",
+        "COP407"
+      ]
+    },
+    {
+      "id": "quality",
+      "theme_ko": "결과의 품질을 운영하기",
+      "session_codes": [
+        "COP337",
+        "COP401-R"
+      ]
+    },
+    {
+      "id": "authorization",
+      "theme_ko": "행동과 권한을 통제하기",
+      "session_codes": [
+        "SEC344",
+        "SEC349"
+      ]
+    },
+    {
+      "id": "scale_economics",
+      "theme_ko": "규모와 경제성 확보하기",
+      "session_codes": [
+        "AIM3321",
+        "ARC317-R"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "category": "ai_ops",
+      "priority": 1,
+      "code": "COP401-R",
+      "rationale_ko": "운영 trace를 평가 데이터로 바꾸고 로컬 재현·수정·배포 검증을 연결한다.",
+      "takeaway_ko": "실패 사례 기반 회귀 평가 루프"
+    },
+    {
+      "category": "ai_ops",
+      "priority": 2,
+      "code": "OPN304-R",
+      "rationale_ko": "OpenTelemetry와 Langfuse로 호출·비용·프롬프트·품질을 관찰한다.",
+      "takeaway_ko": "에이전트 관측 실습"
+    },
+    {
+      "category": "ai_ops",
+      "priority": 3,
+      "code": "COP317-R",
+      "rationale_ko": "장애를 주입하고 skills·MCP·알람·승인된 복구를 연결한다.",
+      "takeaway_ko": "실행 가능한 운영 런북"
+    },
+    {
+      "category": "ai_ops",
+      "priority": 4,
+      "code": "COP407",
+      "rationale_ko": "기능 구현 PR에 계측·알람·대시보드·운영 skills를 함께 남긴다.",
+      "takeaway_ko": "개발과 운영 맥락을 연결하는 완료 기준"
+    },
+    {
+      "category": "ai_ops",
+      "priority": 5,
+      "code": "AIM446-R",
+      "rationale_ko": "도구·지침·메모리·컨텍스트·오케스트레이션 구성을 평가 실험으로 개선한다.",
+      "takeaway_ko": "에이전트 구성의 효과를 검증하는 방법"
+    },
+    {
+      "category": "security",
+      "priority": 1,
+      "code": "SEC321-R",
+      "rationale_ko": "개발 단계마다 결정적 통제·AI 검사·사람 판단을 배치한다.",
+      "takeaway_ko": "AGENTS.md·skills·hooks와 CI 보안을 연결하는 모델"
+    },
+    {
+      "category": "security",
+      "priority": 2,
+      "code": "SEC343",
+      "rationale_ko": "MCP 도구 오염 공격, 정의 변경 검사, 실행 정책과 모니터링을 다룬다.",
+      "takeaway_ko": "MCP 공급망 방어"
+    },
+    {
+      "category": "security",
+      "priority": 3,
+      "code": "SEC407-R",
+      "rationale_ko": "IAM 권한 경계·정책 검증·Cedar를 통한 실행 통제를 구현한다.",
+      "takeaway_ko": "지침을 실제 실행 권한 경계로 전환"
+    },
+    {
+      "category": "security",
+      "priority": 4,
+      "code": "SEC416",
+      "rationale_ko": "스캐너 결과를 에이전트가 검토·분류하고 증거에 따라 정책 통과를 결정한다.",
+      "takeaway_ko": "리뷰·QA를 보안 점검으로 확장"
+    },
+    {
+      "category": "security",
+      "priority": 5,
+      "code": "SEC344",
+      "rationale_ko": "신원·사용자 권한 위임·최소 권한·에이전트 간 접근을 실습한다.",
+      "takeaway_ko": "멀티에이전트 권한 모델"
+    },
+    {
+      "category": "workflow",
+      "priority": 1,
+      "code": "OPN310-R",
+      "rationale_ko": "CLI 도구를 MCP와 tmux로 연결하는 멀티에이전트 실습이다.",
+      "takeaway_ko": "현재 CLI 오케스트레이션과 비교할 구현 패턴"
+    },
+    {
+      "category": "workflow",
+      "priority": 2,
+      "code": "DVT339-R",
+      "rationale_ko": "장기 실행 중 계획과 맥락 손실을 줄이는 패턴을 다룬다.",
+      "takeaway_ko": "오케스트레이션 신뢰성 개선"
+    },
+    {
+      "category": "workflow",
+      "priority": 3,
+      "code": "DVT415-R",
+      "rationale_ko": "스킬·커스텀 에이전트·steering으로 팀의 관례를 전달한다.",
+      "takeaway_ko": "유용한 스킬과 지침의 평가 기준"
+    },
+    {
+      "category": "supplement",
+      "priority": 1,
+      "code": "COP323-R",
+      "rationale_ko": "오류 없는 실행에서도 업무 규칙 위반을 찾는 감사 루프를 만든다.",
+      "takeaway_ko": "정책 준수 평가"
+    },
+    {
+      "category": "supplement",
+      "priority": 2,
+      "code": "SEC347",
+      "rationale_ko": "보안 사고 초기 분석 자동화와 전문가 정답 대비 평가를 다룬다.",
+      "takeaway_ko": "보안 대응 자동화 설계; 성과 수치는 발표자 주장"
+    }
+  ],
+  "shortlist_six": [
+    "COP401-R",
+    "OPN304-R",
+    "COP317-R",
+    "SEC321-R",
+    "SEC343",
+    "SEC407-R"
+  ],
+  "keynote_reading_order": [
+    "KEY003",
+    "KEY001",
+    "KEY005"
+  ],
+  "counterbalance": {
+    "code": "SNR320",
+    "rationale_ko": "초록의 인터뷰 연구는 완전자율 운영의 기대와 실제 위임 범위를 구분하게 한다. 전체 산업으로 일반화하지 않는다."
+  },
+  "supporting_sessions": [
+    "STG201",
+    "AIM450-R",
+    "KEY005"
+  ],
+  "trends": [
+    {
+      "id": "eval_observability",
+      "prediction_ko": "평가가 관측·배포 과정에 들어옴",
+      "confidence": "high",
+      "reasoning_ko": "정상 응답만으로 업무 품질을 보장할 수 없어 trace와 회귀 평가를 연결하게 된다.",
+      "session_codes": [
+        "COP401-R",
+        "AIM440",
+        "COP323-R"
+      ],
+      "evidence_type": "catalog-based inference"
+    },
+    {
+      "id": "scoped_autonomy",
+      "prediction_ko": "업무별로 자율성을 다르게 부여함",
+      "confidence": "high",
+      "reasoning_ko": "일상적 동작은 자동 승인하고 모호하거나 영향이 큰 동작은 사람에게 넘긴다.",
+      "session_codes": [
+        "SEC349",
+        "COP353",
+        "SEC407-R"
+      ],
+      "evidence_type": "catalog-based inference"
+    },
+    {
+      "id": "agent_identity_security",
+      "prediction_ko": "MCP·에이전트 신원이 보안의 주요 대상이 됨",
+      "confidence": "high",
+      "reasoning_ko": "도구 정의 변조와 사용자 위임 및 에이전트 간 권한 전파를 관리해야 한다.",
+      "session_codes": [
+        "SEC343",
+        "SEC344",
+        "SEC419"
+      ],
+      "evidence_type": "catalog-based inference"
+    },
+    {
+      "id": "context_harness",
+      "prediction_ko": "컨텍스트·스킬·메모리를 평가하며 관리함",
+      "confidence": "high",
+      "reasoning_ko": "동일 모델에서도 정보와 도구 구성에 따라 결과가 달라진다.",
+      "session_codes": [
+        "AIM446-R",
+        "AIM450-R",
+        "DVT415-R"
+      ],
+      "evidence_type": "catalog-based inference"
+    },
+    {
+      "id": "release_ops",
+      "prediction_ko": "코딩 자동화가 릴리스·운영 자동화로 확장됨",
+      "confidence": "medium_high",
+      "reasoning_ko": "PR 생성량이 늘면서 검증·배포가 병목이 된다.",
+      "session_codes": [
+        "COP406-R",
+        "COP407",
+        "DVT227"
+      ],
+      "evidence_type": "catalog-based inference"
+    },
+    {
+      "id": "agent_finops",
+      "prediction_ko": "에이전트 비용을 사용자·업무 결과 단위로 관리함",
+      "confidence": "high",
+      "reasoning_ko": "반복·컨텍스트·도구 사용에 따른 비용 변동을 예산 제한과 비용 귀속으로 관리한다.",
+      "session_codes": [
+        "AIM3321",
+        "PEX303-R",
+        "COP311-R"
+      ],
+      "evidence_type": "catalog-based inference"
+    }
+  ],
+  "lower_priority_near_term": [
+    "Fully autonomous operation of all production systems",
+    "Applying complex multi-agent designs to every problem"
+  ]
+}

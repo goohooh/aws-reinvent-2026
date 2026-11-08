@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_filename": "reinvent2026_sessions.json",
+  "source_kind": "user-supplied session catalog",
+  "source_sha256": "8d8134a602364372dadce9b5e6aa03bc1268b74083df247a352d8f57ce23da39",
+  "record_count": 2468,
+  "source_collected_at": null,
+  "source_collection_method": null,
+  "source_catalog_url": null,
+  "analysis_date": "2026-11-05",
+  "prepared_on": "2026-11-08",
+  "source_preserved_byte_for_byte": true,
+  "source_fields_translation_method": "unknown",
+  "rights_notice": "Third-party session titles, abstracts, and other catalog content remain with their respective rights holders. No blanket license is granted over the source catalog.",
+  "official_context_sources": [
+    {
+      "url": "https://aws.amazon.com/ko/bedrock/agentcore/",
+      "checked_on": "2026-11-05",
+      "scope": "Product context only; not verification of event schedule or all catalog claims."
+    },
+    {
+      "url": "https://aws.amazon.com/ko/devops-agent/",
+      "checked_on": "2026-11-05",
+      "scope": "Product context only; not verification of event schedule or all catalog claims."
+    }
+  ]
+}

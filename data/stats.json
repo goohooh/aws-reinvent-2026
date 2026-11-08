@@ -1,0 +1,1502 @@
+{
+  "schema_version": 1,
+  "source_sha256": "8d8134a602364372dadce9b5e6aa03bc1268b74083df247a352d8f57ce23da39",
+  "record_count": 2468,
+  "unique_title_count": 1849,
+  "excluded_types": [
+    "Event service",
+    "Expo",
+    "Featured experience"
+  ],
+  "included_title_count": 1790,
+  "group_by": "exact title; first record supplies group type; union of tags",
+  "tag_counts": {
+    "topic": [
+      {
+        "tag": "Artificial Intelligence",
+        "count": 869,
+        "percent": 48.5
+      },
+      {
+        "tag": "Security & Identity",
+        "count": 282,
+        "percent": 15.8
+      },
+      {
+        "tag": "Architecture",
+        "count": 206,
+        "percent": 11.5
+      },
+      {
+        "tag": "Cloud Operations",
+        "count": 202,
+        "percent": 11.3
+      },
+      {
+        "tag": "Business Agents",
+        "count": 188,
+        "percent": 10.5
+      },
+      {
+        "tag": "Migration & Modernization",
+        "count": 184,
+        "percent": 10.3
+      },
+      {
+        "tag": "Developer Tools",
+        "count": 159,
+        "percent": 8.9
+      },
+      {
+        "tag": "Industry Solutions",
+        "count": 135,
+        "percent": 7.5
+      },
+      {
+        "tag": "Compute",
+        "count": 126,
+        "percent": 7.0
+      },
+      {
+        "tag": "Analytics",
+        "count": 120,
+        "percent": 6.7
+      },
+      {
+        "tag": "Databases",
+        "count": 106,
+        "percent": 5.9
+      },
+      {
+        "tag": "Serverless",
+        "count": 97,
+        "percent": 5.4
+      },
+      {
+        "tag": "Storage",
+        "count": 94,
+        "percent": 5.3
+      },
+      {
+        "tag": "Containers",
+        "count": 91,
+        "percent": 5.1
+      },
+      {
+        "tag": "Networking & Content Delivery",
+        "count": 76,
+        "percent": 4.2
+      },
+      {
+        "tag": "Hybrid Cloud & Multicloud",
+        "count": 72,
+        "percent": 4.0
+      },
+      {
+        "tag": "Application Integration",
+        "count": 68,
+        "percent": 3.8
+      },
+      {
+        "tag": "Open Source",
+        "count": 31,
+        "percent": 1.7
+      }
+    ],
+    "areaOfInterest": [
+      {
+        "tag": "Agentic AI",
+        "count": 787,
+        "percent": 44.0
+      },
+      {
+        "tag": "Generative AI",
+        "count": 294,
+        "percent": 16.4
+      },
+      {
+        "tag": "Innovation & Transformation",
+        "count": 237,
+        "percent": 13.2
+      },
+      {
+        "tag": "Cost Optimization",
+        "count": 197,
+        "percent": 11.0
+      },
+      {
+        "tag": "Automation",
+        "count": 180,
+        "percent": 10.1
+      },
+      {
+        "tag": "DevOps",
+        "count": 176,
+        "percent": 9.8
+      },
+      {
+        "tag": "Monitoring & Observability",
+        "count": 133,
+        "percent": 7.4
+      },
+      {
+        "tag": "Governance, Risk & Compliance",
+        "count": 120,
+        "percent": 6.7
+      },
+      {
+        "tag": "Resilience",
+        "count": 108,
+        "percent": 6.0
+      },
+      {
+        "tag": "Global Infrastructure",
+        "count": 82,
+        "percent": 4.6
+      },
+      {
+        "tag": "Application Security",
+        "count": 75,
+        "percent": 4.2
+      },
+      {
+        "tag": "Machine Learning",
+        "count": 74,
+        "percent": 4.1
+      },
+      {
+        "tag": "Identity & Access Management",
+        "count": 71,
+        "percent": 4.0
+      },
+      {
+        "tag": "Network & Infrastructure Security",
+        "count": 59,
+        "percent": 3.3
+      },
+      {
+        "tag": "DevSecOps",
+        "count": 58,
+        "percent": 3.2
+      },
+      {
+        "tag": "Lambda-Based Applications",
+        "count": 58,
+        "percent": 3.2
+      },
+      {
+        "tag": "Data Protection",
+        "count": 57,
+        "percent": 3.2
+      },
+      {
+        "tag": "Threat Detection & Incident Response",
+        "count": 56,
+        "percent": 3.1
+      },
+      {
+        "tag": "Well-Architected Framework",
+        "count": 54,
+        "percent": 3.0
+      },
+      {
+        "tag": "Event-Driven Architecture",
+        "count": 53,
+        "percent": 3.0
+      },
+      {
+        "tag": "Kubernetes",
+        "count": 49,
+        "percent": 2.7
+      },
+      {
+        "tag": "Training & Certification",
+        "count": 49,
+        "percent": 2.7
+      },
+      {
+        "tag": "Management & Governance",
+        "count": 48,
+        "percent": 2.7
+      },
+      {
+        "tag": "Responsible AI",
+        "count": 42,
+        "percent": 2.3
+      },
+      {
+        "tag": "Partner Enablement",
+        "count": 41,
+        "percent": 2.3
+      },
+      {
+        "tag": "Amazon Builds on AWS",
+        "count": 38,
+        "percent": 2.1
+      },
+      {
+        "tag": "Business Intelligence",
+        "count": 35,
+        "percent": 2.0
+      },
+      {
+        "tag": "Edge Computing",
+        "count": 35,
+        "percent": 2.0
+      },
+      {
+        "tag": "Customer Enablement",
+        "count": 34,
+        "percent": 1.9
+      },
+      {
+        "tag": "Disaster Response & Recovery",
+        "count": 31,
+        "percent": 1.7
+      },
+      {
+        "tag": "Open Data",
+        "count": 24,
+        "percent": 1.3
+      },
+      {
+        "tag": "Culture of Security",
+        "count": 23,
+        "percent": 1.3
+      },
+      {
+        "tag": "VMware",
+        "count": 22,
+        "percent": 1.2
+      },
+      {
+        "tag": "Microsoft & .NET",
+        "count": 21,
+        "percent": 1.2
+      },
+      {
+        "tag": "SaaS",
+        "count": 19,
+        "percent": 1.1
+      },
+      {
+        "tag": "Front-End Web & Mobile",
+        "count": 18,
+        "percent": 1.0
+      },
+      {
+        "tag": "Tech for Impact",
+        "count": 18,
+        "percent": 1.0
+      },
+      {
+        "tag": "Cryptography and Post-Quantum",
+        "count": 15,
+        "percent": 0.8
+      },
+      {
+        "tag": "Zero Trust",
+        "count": 15,
+        "percent": 0.8
+      },
+      {
+        "tag": "Digital Sovereignty",
+        "count": 14,
+        "percent": 0.8
+      },
+      {
+        "tag": "Threat Intelligence",
+        "count": 14,
+        "percent": 0.8
+      },
+      {
+        "tag": "SAP",
+        "count": 13,
+        "percent": 0.7
+      },
+      {
+        "tag": "Workforce Development",
+        "count": 12,
+        "percent": 0.7
+      },
+      {
+        "tag": "Robotics",
+        "count": 11,
+        "percent": 0.6
+      },
+      {
+        "tag": "Internet of Things",
+        "count": 10,
+        "percent": 0.6
+      },
+      {
+        "tag": "Oracle",
+        "count": 8,
+        "percent": 0.4
+      },
+      {
+        "tag": "Quantum Technologies",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Sustainability",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Blockchain",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "Inclusion",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Privacy",
+        "count": 1,
+        "percent": 0.1
+      }
+    ],
+    "services": [
+      {
+        "tag": "Amazon Bedrock",
+        "count": 364,
+        "percent": 20.3
+      },
+      {
+        "tag": "Amazon Elastic Compute Cloud (Amazon EC2)",
+        "count": 136,
+        "percent": 7.6
+      },
+      {
+        "tag": "AWS Lambda",
+        "count": 107,
+        "percent": 6.0
+      },
+      {
+        "tag": "Kiro",
+        "count": 98,
+        "percent": 5.5
+      },
+      {
+        "tag": "Amazon Elastic Kubernetes Service (Amazon EKS)",
+        "count": 93,
+        "percent": 5.2
+      },
+      {
+        "tag": "Amazon Simple Storage Service (Amazon S3)",
+        "count": 87,
+        "percent": 4.9
+      },
+      {
+        "tag": "Amazon CloudWatch",
+        "count": 72,
+        "percent": 4.0
+      },
+      {
+        "tag": "AWS Transform",
+        "count": 71,
+        "percent": 4.0
+      },
+      {
+        "tag": "Amazon Elastic Container Service (Amazon ECS)",
+        "count": 40,
+        "percent": 2.2
+      },
+      {
+        "tag": "AWS Identity and Access Management (IAM)",
+        "count": 39,
+        "percent": 2.2
+      },
+      {
+        "tag": "Amazon SageMaker",
+        "count": 34,
+        "percent": 1.9
+      },
+      {
+        "tag": "Amazon Virtual Private Cloud (Amazon VPC)",
+        "count": 32,
+        "percent": 1.8
+      },
+      {
+        "tag": "Amazon DynamoDB",
+        "count": 31,
+        "percent": 1.7
+      },
+      {
+        "tag": "Amazon EventBridge",
+        "count": 30,
+        "percent": 1.7
+      },
+      {
+        "tag": "AWS DevOps Agent",
+        "count": 29,
+        "percent": 1.6
+      },
+      {
+        "tag": "AWS Glue",
+        "count": 29,
+        "percent": 1.6
+      },
+      {
+        "tag": "Amazon Aurora",
+        "count": 28,
+        "percent": 1.6
+      },
+      {
+        "tag": "AWS Security Hub",
+        "count": 27,
+        "percent": 1.5
+      },
+      {
+        "tag": "AWS Step Functions",
+        "count": 27,
+        "percent": 1.5
+      },
+      {
+        "tag": "Amazon Connect",
+        "count": 24,
+        "percent": 1.3
+      },
+      {
+        "tag": "AWS Organizations",
+        "count": 22,
+        "percent": 1.2
+      },
+      {
+        "tag": "AWS Trainium",
+        "count": 22,
+        "percent": 1.2
+      },
+      {
+        "tag": "Amazon API Gateway",
+        "count": 22,
+        "percent": 1.2
+      },
+      {
+        "tag": "Amazon SageMaker AI",
+        "count": 21,
+        "percent": 1.2
+      },
+      {
+        "tag": "Amazon CloudFront",
+        "count": 20,
+        "percent": 1.1
+      },
+      {
+        "tag": "Amazon Neptune",
+        "count": 19,
+        "percent": 1.1
+      },
+      {
+        "tag": "AWS Config",
+        "count": 18,
+        "percent": 1.0
+      },
+      {
+        "tag": "AWS Marketplace",
+        "count": 18,
+        "percent": 1.0
+      },
+      {
+        "tag": "AWS Outposts",
+        "count": 18,
+        "percent": 1.0
+      },
+      {
+        "tag": "AWS WAF",
+        "count": 18,
+        "percent": 1.0
+      },
+      {
+        "tag": "Amazon EC2 - Graviton",
+        "count": 17,
+        "percent": 0.9
+      },
+      {
+        "tag": "Amazon GuardDuty",
+        "count": 17,
+        "percent": 0.9
+      },
+      {
+        "tag": "Amazon Redshift",
+        "count": 17,
+        "percent": 0.9
+      },
+      {
+        "tag": "Amazon Relational Database Service (Amazon RDS)",
+        "count": 17,
+        "percent": 0.9
+      },
+      {
+        "tag": "AWS Network Firewall",
+        "count": 16,
+        "percent": 0.9
+      },
+      {
+        "tag": "Amazon Quick",
+        "count": 16,
+        "percent": 0.9
+      },
+      {
+        "tag": "Amazon Aurora for PostgreSQL",
+        "count": 15,
+        "percent": 0.8
+      },
+      {
+        "tag": "Amazon EMR",
+        "count": 15,
+        "percent": 0.8
+      },
+      {
+        "tag": "Amazon OpenSearch Service",
+        "count": 15,
+        "percent": 0.8
+      },
+      {
+        "tag": "AWS Key Management Service (AWS KMS)",
+        "count": 14,
+        "percent": 0.8
+      },
+      {
+        "tag": "AWS Security Agent",
+        "count": 14,
+        "percent": 0.8
+      },
+      {
+        "tag": "AWS Billing and Cost Management",
+        "count": 13,
+        "percent": 0.7
+      },
+      {
+        "tag": "AWS CloudTrail",
+        "count": 13,
+        "percent": 0.7
+      },
+      {
+        "tag": "Amazon Athena",
+        "count": 13,
+        "percent": 0.7
+      },
+      {
+        "tag": "Amazon Elastic Block Store (Amazon EBS)",
+        "count": 13,
+        "percent": 0.7
+      },
+      {
+        "tag": "AWS Backup",
+        "count": 12,
+        "percent": 0.7
+      },
+      {
+        "tag": "AWS Direct Connect",
+        "count": 12,
+        "percent": 0.7
+      },
+      {
+        "tag": "AWS Local Zones",
+        "count": 12,
+        "percent": 0.7
+      },
+      {
+        "tag": "Amazon Nova",
+        "count": 12,
+        "percent": 0.7
+      },
+      {
+        "tag": "Amazon Route 53",
+        "count": 12,
+        "percent": 0.7
+      },
+      {
+        "tag": "AWS Distro for OpenTelemetry",
+        "count": 11,
+        "percent": 0.6
+      },
+      {
+        "tag": "Amazon OpenSearch Serverless",
+        "count": 11,
+        "percent": 0.6
+      },
+      {
+        "tag": "AWS CloudFormation",
+        "count": 10,
+        "percent": 0.6
+      },
+      {
+        "tag": "Amazon Managed Streaming for Apache Kafka (Amazon MSK)",
+        "count": 10,
+        "percent": 0.6
+      },
+      {
+        "tag": "AWS Control Tower",
+        "count": 9,
+        "percent": 0.5
+      },
+      {
+        "tag": "AWS Fargate",
+        "count": 9,
+        "percent": 0.5
+      },
+      {
+        "tag": "Amazon Cognito",
+        "count": 9,
+        "percent": 0.5
+      },
+      {
+        "tag": "Amazon EC2 Linux",
+        "count": 9,
+        "percent": 0.5
+      },
+      {
+        "tag": "Amazon Simple Queue Service (Amazon SQS)",
+        "count": 9,
+        "percent": 0.5
+      },
+      {
+        "tag": "AWS Cloud Development Kit (AWS CDK)",
+        "count": 8,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon Application Recovery Controller",
+        "count": 8,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon ElastiCache",
+        "count": 8,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon FSx for NetApp ONTAP",
+        "count": 8,
+        "percent": 0.4
+      },
+      {
+        "tag": "Elastic Load Balancing (ELB)",
+        "count": 8,
+        "percent": 0.4
+      },
+      {
+        "tag": "AWS Batch",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "AWS IAM Identity Center",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "AWS Systems Manager",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon Aurora DSQL",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon Bedrock AgentCore",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon Braket",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon Inspector",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon Q",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Amazon VPC Lattice",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "OpenSearch",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "AWS Parallel Computing Service",
+        "count": 6,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Resilience Hub",
+        "count": 6,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Security Token Service (AWS STS)",
+        "count": 6,
+        "percent": 0.3
+      },
+      {
+        "tag": "Amazon Elastic Container Registry (Amazon ECR)",
+        "count": 6,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Cloud WAN",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Compute Optimizer",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Fault Injection Service",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Firewall Manager",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS PrivateLink",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Transit Gateway",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "Amazon CloudWatch Logs",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "Amazon FSx for Lustre",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "Amazon Quick Suite",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "AWS Amplify",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS CodeBuild",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS CodePipeline",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS Interconnect",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon EC2 Spot",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon FSx",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon Managed Service for Prometheus",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon QuickSight",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon Verified Permissions",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon WorkSpaces",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS AppSync",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS Application Migration Service",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS Certificate Manager (ACM)",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS Context",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS DataSync",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS Elastic Disaster Recovery",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS Elemental MediaLive",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS IAM Access Analyzer",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS IoT Greengrass",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS Savings Plans",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon DocumentDB (with MongoDB compatibility)",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon Kinesis Data Streams",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon Managed Grafana",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon Managed Workflows for Apache Airflow (Amazon MWAA)",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "Amazon Q Business",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "EC2 Image Builder",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "AWS AppConfig",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Continuum",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Elemental MediaConvert",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS IoT Core",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Lake Formation",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Mainframe Modernization",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Network Security Manager",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Secrets Manager",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Shield",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Site-to-Site VPN",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Transfer Family",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Well-Architected Tool",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Elastic File System (Amazon EFS)",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Elastic VMware Service (EVS)",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon GameLift",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Lex",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Q Developer",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Quicksight Q",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon RDS for PostgreSQL",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Rekognition",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Oracle Database@AWS",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Red Hat OpenShift Service on AWS (ROSA)",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Application Discovery Service",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Artifact",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS CloudHSM",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS CodeDeploy",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Command Line Interface (AWS CLI)",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Database Migration Service (AWS DMS)",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Dedicated Local Zones",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Device Farm",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Elastic Beanstalk",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Global Accelerator",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS GovCloud (US)",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS HealthLake",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS HealthOmics",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS IoT SiteWise",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS License Manager",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Management Console",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Payment Cryptography",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Private Certificate Authority",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS RTB Fabric",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Resource Explorer",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Security Incident Response",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Service Catalog",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Signer",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS SimSpace Weaver",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "AWS Supply Chain",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon CloudWatch Application Insights",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon CodeGuru",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Detective",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon DevOps Guru",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon DynamoDB Streams",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon EC2 Auto Scaling",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon ElastiCache Serverless",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Elastic Transcoder",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon FSx for OpenZFS",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon FSx for Windows File Server",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Interactive Video Service (Amazon IVS)",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Kinesis",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Kinesis Video Streams",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Lightsail",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon MQ",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Neptune Analytics",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Textract",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon Transcribe",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Amazon WorkSpaces Core",
+        "count": 1,
+        "percent": 0.1
+      },
+      {
+        "tag": "Vector Engine for Amazon OpenSearch Serverless",
+        "count": 1,
+        "percent": 0.1
+      }
+    ],
+    "role": [
+      {
+        "tag": "Developer / Engineer",
+        "count": 859,
+        "percent": 48.0
+      },
+      {
+        "tag": "Solution / Systems Architect",
+        "count": 857,
+        "percent": 47.9
+      },
+      {
+        "tag": "IT Professional / Technical Manager",
+        "count": 434,
+        "percent": 24.2
+      },
+      {
+        "tag": "DevOps Engineer",
+        "count": 387,
+        "percent": 21.6
+      },
+      {
+        "tag": "IT Executive",
+        "count": 261,
+        "percent": 14.6
+      },
+      {
+        "tag": "Business Executive",
+        "count": 226,
+        "percent": 12.6
+      },
+      {
+        "tag": "Cloud Security Specialist",
+        "count": 187,
+        "percent": 10.4
+      },
+      {
+        "tag": "Data Engineer",
+        "count": 130,
+        "percent": 7.3
+      },
+      {
+        "tag": "IT Administrator",
+        "count": 103,
+        "percent": 5.8
+      },
+      {
+        "tag": "Academic / Researcher",
+        "count": 84,
+        "percent": 4.7
+      },
+      {
+        "tag": "Data Scientist",
+        "count": 77,
+        "percent": 4.3
+      },
+      {
+        "tag": "System Administrator",
+        "count": 72,
+        "percent": 4.0
+      },
+      {
+        "tag": "Advisor / Consultant",
+        "count": 46,
+        "percent": 2.6
+      },
+      {
+        "tag": "Entrepreneur (Founder/Co-Founder)",
+        "count": 43,
+        "percent": 2.4
+      },
+      {
+        "tag": "Sales / Marketing",
+        "count": 40,
+        "percent": 2.2
+      },
+      {
+        "tag": "Tech Explorer",
+        "count": 29,
+        "percent": 1.6
+      },
+      {
+        "tag": "Venture Capitalist",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Student",
+        "count": 3,
+        "percent": 0.2
+      },
+      {
+        "tag": "Press / Media Analyst",
+        "count": 2,
+        "percent": 0.1
+      }
+    ],
+    "industry": [
+      {
+        "tag": "Financial Services",
+        "count": 51,
+        "percent": 2.8
+      },
+      {
+        "tag": "Media & Entertainment",
+        "count": 19,
+        "percent": 1.1
+      },
+      {
+        "tag": "Government",
+        "count": 18,
+        "percent": 1.0
+      },
+      {
+        "tag": "Healthcare & Life Sciences",
+        "count": 13,
+        "percent": 0.7
+      },
+      {
+        "tag": "Retail & Consumer Goods",
+        "count": 13,
+        "percent": 0.7
+      },
+      {
+        "tag": "Automotive",
+        "count": 11,
+        "percent": 0.6
+      },
+      {
+        "tag": "Telecommunications",
+        "count": 11,
+        "percent": 0.6
+      },
+      {
+        "tag": "Games",
+        "count": 9,
+        "percent": 0.5
+      },
+      {
+        "tag": "Manufacturing & Industrial",
+        "count": 9,
+        "percent": 0.5
+      },
+      {
+        "tag": "Advertising & Marketing",
+        "count": 8,
+        "percent": 0.4
+      },
+      {
+        "tag": "Education",
+        "count": 7,
+        "percent": 0.4
+      },
+      {
+        "tag": "Energy & Utilities",
+        "count": 5,
+        "percent": 0.3
+      },
+      {
+        "tag": "Sports",
+        "count": 4,
+        "percent": 0.2
+      },
+      {
+        "tag": "Software & Internet",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Travel & Hospitality",
+        "count": 2,
+        "percent": 0.1
+      },
+      {
+        "tag": "Nonprofit",
+        "count": 1,
+        "percent": 0.1
+      }
+    ],
+    "features": [
+      {
+        "tag": "Lecture-style",
+        "count": 808,
+        "percent": 45.1
+      },
+      {
+        "tag": "Discussion",
+        "count": 542,
+        "percent": 30.3
+      },
+      {
+        "tag": "Hands-on",
+        "count": 434,
+        "percent": 24.2
+      },
+      {
+        "tag": "AWS Partners",
+        "count": 297,
+        "percent": 16.6
+      },
+      {
+        "tag": "Customer story",
+        "count": 68,
+        "percent": 3.8
+      },
+      {
+        "tag": "Community-led",
+        "count": 30,
+        "percent": 1.7
+      },
+      {
+        "tag": "Self-paced",
+        "count": 4,
+        "percent": 0.2
+      }
+    ]
+  },
+  "agentic_ai_cross_topics": [
+    {
+      "topic": "Security & Identity",
+      "count": 123,
+      "denominator": 282,
+      "percent": 43.6
+    },
+    {
+      "topic": "Cloud Operations",
+      "count": 82,
+      "denominator": 202,
+      "percent": 40.6
+    },
+    {
+      "topic": "Developer Tools",
+      "count": 109,
+      "denominator": 159,
+      "percent": 68.6
+    }
+  ]
+}
